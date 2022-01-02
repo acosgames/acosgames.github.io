@@ -267,6 +267,115 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#game-state-objects" class="md-nav__link">
+    Game State Objects
+  </a>
+  
+    <nav class="md-nav" aria-label="Game State Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+    <nav class="md-nav" aria-label="state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hidden-values" class="md-nav__link">
+    hidden values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamestatus" class="md-nav__link">
+    gamestatus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#players" class="md-nav__link">
+    players
+  </a>
+  
+    <nav class="md-nav" aria-label="players">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready" class="md-nav__link">
+    ready
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rank-score" class="md-nav__link">
+    rank &amp; score
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-values_1" class="md-nav__link">
+    hidden values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    timer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    next
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -341,6 +450,115 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#game-state-objects" class="md-nav__link">
+    Game State Objects
+  </a>
+  
+    <nav class="md-nav" aria-label="Game State Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+    <nav class="md-nav" aria-label="state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hidden-values" class="md-nav__link">
+    hidden values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamestatus" class="md-nav__link">
+    gamestatus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#players" class="md-nav__link">
+    players
+  </a>
+  
+    <nav class="md-nav" aria-label="players">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready" class="md-nav__link">
+    ready
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rank-score" class="md-nav__link">
+    rank &amp; score
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-values_1" class="md-nav__link">
+    hidden values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timer" class="md-nav__link">
+    timer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    next
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -391,6 +609,152 @@
 <span class="c1">//if you detect a bad action, tell system you want it ignored.</span>
 <span class="nx">globals</span><span class="p">.</span><span class="nx">ignore</span><span class="p">();</span>
 </code></pre></div>
+<h2 id="game-state-objects">Game State Objects</h2>
+<p>The Game State consists of several objects:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;players&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;events&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;timer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="state">state</h3>
+<p>This is where you should keep all data that mutates on every action that affects the game board or environment.</p>
+<h4 id="hidden-values">hidden values</h4>
+<p>Inside the <code>state</code> object, you can create variables with <code>_</code> underscore to make them private.</p>
+<p>Example, that hides the deck from sending to clients:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;_deck&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;AS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;AH&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;3D&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="gamestatus">gamestatus</h4>
+<p>The <strong>gamestatus</strong> key is auto-generated by the platform and saved inside the <code>state</code>.</p>
+<p>The possible values are:</p>
+<ol>
+<li><code>pregame</code></li>
+<li><code>starting</code></li>
+<li><code>gamestart</code></li>
+<li><code>gameover</code></li>
+</ol>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gamestatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gamestart&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Game status is used internally by the platform with the timer to trigger the next gamestatus. Exception is when <code>gamestatus="gamestart"</code>, the timers will cause a "skip" action, for the current player(s) who are next.</p>
+<h3 id="players">players</h3>
+<p>When players are added into the game, they are automatically added into the players object. All players have a <code>shortid</code> that references them inside the Acos databse.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;players&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;ABCDEF&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JoeFacebook&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;rank&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;ready&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;UVWXYZ&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JoeOfTexas&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;rank&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;ready&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="ready">ready</h4>
+<p>Your client must trigger an action <code>send('ready', true)</code> when your client front-end is loaded. This is saved into the player's object, and let's the platform know when to trigger a <strong>gamestart</strong> event.</p>
+<h4 id="rank-score">rank &amp; score</h4>
+<p><code>rank</code> is set by you to determine who is in 1st, 2nd, 3rd, ..., nth place. On gameover, the system will update the player ratings based on this value.</p>
+<p><code>score</code> is set by your to determine how many points the users have earned. This has no purpose, unless rank is removed, scores are used to calculate new player ratings.</p>
+<h4 id="name">name</h4>
+<p><code>name</code> is the user's name that was setup when user first logged in.</p>
+<h4 id="hidden-values_1">hidden values</h4>
+<p>Inside the <code>players</code> object, you can create variables with <code>_</code> underscore to make them private.</p>
+<p>Example that hides the user's cards from sharing with other players:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;player&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;ABCDEF&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JoeOfTexas&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;rank&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;_cards&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;3S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;4S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;5S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;6S&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="rules">rules</h3>
+<p>Rules are not mandatory, but its a clean way to define the rules of your game. How many rounds, max players, min players. Ideally, these should be static and not change, but you can change between actions if needed.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;maxplayers&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;minplayers&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rounds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="events">events</h3>
+<p>Events are used to notify when an actions occur from a user or the Acos platform</p>
+<ul>
+<li><strong>pregame</strong></li>
+<li>Triggered when the first player joins the game</li>
+<li><strong>starting</strong></li>
+<li>Triggered when all players are ready (client front-ends are all loaded)</li>
+<li><strong>gamestart</strong></li>
+<li>Triggered after the starting countdown reaches zero</li>
+<li><strong>gameover</strong></li>
+<li>Triggered when the game ends and room is closed</li>
+</ul>
+<p><strong>custom events</strong></p>
+<p>You can create your own events by defining any key, here we used <code>pick</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;events&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;pick&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABCDEF&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;picked&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Or you could do even simpler:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;events&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;pick&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="timer">timer</h3>
+<p>The timer helps control the flow of the game. It is important that you always set a timer. Rooms will be destroyed if they do not complete within 1 hour.</p>
+<p>To set a timer, make sure you commit the game state with this format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;timer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;set&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The example above sets a timer for 15 seconds.</p>
+<p>The platform will detect the seconds set, and create these values:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;timer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1641166075</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>On the client-side, <code>end</code> can be used to calculate timeleft.</p>
+<h3 id="next">next</h3>
+<p>The next object is used to tell the system who is allowed to send an action.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The only required key is the <code>id</code> key. The values can be either <code>*</code> or player's shortid, i.e. <code>ABCDEF</code></p>
 
               
             </article>
