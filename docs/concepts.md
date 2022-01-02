@@ -6,7 +6,7 @@ Overview of the concepts that make games work on the Acos platform.
 
 ### Game Client
 
-The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called `acosg.js` that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the `acosg.js` file does.
+The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js)that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) file does.
 
 #### Send Action
 
@@ -21,6 +21,10 @@ The first parameter is always a string, second parameter can be any primitive, a
 ## Game Server
 
 The server is responsible for building the **game state** that is automatically synchronized to all clients.
+
+There is a helper file used on the game-server side also called [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js). Its a wrapper to help simplify using the globals listed below.
+
+See the [index.js](https://github.com/acosgames/tictactoe/blob/main/game-server/index.js) and [game.js](https://github.com/acosgames/tictactoe/blob/main/game-server/game.js) for the usage of the helper file.
 
 Your server code will be run inside a JS virtual machine, and you will have access to the **globals** object.
 
