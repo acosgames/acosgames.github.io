@@ -1,0 +1,11 @@
+site_name: My Docs
+site_url: https://acos.games
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+nav:
+  - Getting Started: index.md
+  - Dev Concepts: concepts.md
