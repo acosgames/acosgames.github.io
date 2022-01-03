@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://acos.games/development/" rel="canonical"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-8.1.4" name="generator"/>
+<title>Development - A cup of skill</title>
+<link href="../assets/stylesheets/main.bb3983ee.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#development">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="A cup of skill" class="md-header__button md-logo" data-md-component="logo" href="https://acos.games" title="A cup of skill">
+<img alt="logo" src="../img/acos-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            A cup of skill
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Development
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="A cup of skill" class="md-nav__button md-logo" data-md-component="logo" href="https://acos.games" title="A cup of skill">
+<img alt="logo" src="../img/acos-logo.png"/>
+</a>
+    A cup of skill
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Development
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Development
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simulator">
+    Simulator
+  </a>
+<nav aria-label="Simulator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-machine">
+    State Machine
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-client">
+    Game Client
+  </a>
+<nav aria-label="Game Client" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#send-action">
+    Send Action
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-server">
+    Game Server
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-state">
+    Game State
+  </a>
+<nav aria-label="Game State" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state">
+    state
+  </a>
+<nav aria-label="state" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hidden-values">
+    hidden values
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gamestatus">
+    gamestatus
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#players">
+    players
+  </a>
+<nav aria-label="players" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ready">
+    ready
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rank-score">
+    rank &amp; score
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#name">
+    name
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hidden-values_1">
+    hidden values
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules">
+    rules
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#events">
+    events
+  </a>
+<nav aria-label="events" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-defined-events">
+    system defined events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-events">
+    custom events
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timer">
+    timer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next">
+    next
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simulator">
+    Simulator
+  </a>
+<nav aria-label="Simulator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-machine">
+    State Machine
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-client">
+    Game Client
+  </a>
+<nav aria-label="Game Client" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#send-action">
+    Send Action
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-server">
+    Game Server
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-state">
+    Game State
+  </a>
+<nav aria-label="Game State" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state">
+    state
+  </a>
+<nav aria-label="state" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hidden-values">
+    hidden values
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gamestatus">
+    gamestatus
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#players">
+    players
+  </a>
+<nav aria-label="players" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ready">
+    ready
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rank-score">
+    rank &amp; score
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#name">
+    name
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hidden-values_1">
+    hidden values
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules">
+    rules
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#events">
+    events
+  </a>
+<nav aria-label="events" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-defined-events">
+    system defined events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-events">
+    custom events
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timer">
+    timer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next">
+    next
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="development">Development</h1>
+<p>Overview of the concepts that make games work on the Acos platform.</p>
+<h2 id="simulator">Simulator</h2>
+<p>Development of the client and server can be done offline using the <a href="https://github.com/acosgames/acosgames">acosgames</a> simulator. This simulates the environment used on <a href="https://acos.games">acos.games</a>.</p>
+<p>Your code in <code>game-client</code> and <code>game-server</code> sit on the edge, while the simulator sits in the middle.</p>
+<h3 id="state-machine">State Machine</h3>
+<div class="mermaid">graph LR
+  A[client] --&gt; B[Action]
+  B[Action] --&gt; C{WebSocket Server};
+  C --&gt; D[VirtualMachine];
+  D --&gt; E[server];
+  E --&gt; D;
+  D --&gt; C;
+  C --&gt; A;</div>
+<p>The client peforms an <strong>action</strong> and the server executes that action. Your game logic results are saved into the <a href="#game-state">Game State</a> which is just a plain JSON object. The simulator will synchronize the JSON between all connected clients and store the game state for the next action.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, try to use a seed from any data within the <a href="#game-state">Game State</a>.</p>
+</div>
+<h2 id="game-client">Game Client</h2>
+<p>The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> file does.</p>
+<h3 id="send-action">Send Action</h3>
+<p>Client's can send actions in the following format using the acosg.js <code>send</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">send</span><span class="p">(</span><span class="s2">"pick"</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
+</code></pre></div>
+<p>The first parameter is always a string, second parameter can be any primitive, array, or object type.</p>
+<h2 id="game-server">Game Server</h2>
+<p>The server is responsible for building the <strong>game state</strong> that is automatically synchronized to all clients.</p>
+<p>There is a helper file used on the game-server side also called <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js">acosg.js</a>. Its a wrapper to help simplify using the globals listed below.</p>
+<p>See the <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/index.js">index.js</a> and <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/game.js">game.js</a> for the usage of the helper file.</p>
+<p>Your server code will be run inside a JS virtual machine, and you will have access to the <strong>globals</strong> object.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//log a message, only available in simulator</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+
+<span class="c1">//log an error, only available in simulator</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+
+<span class="c1">//get the array of actions sent by users or system</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">actions</span><span class="p">();</span>
+
+<span class="c1">//get the latest Game State JSON</span>
+<span class="c1">// copy this to a variable and make changes directly to it</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">game</span><span class="p">();</span>
+
+<span class="c1">//get the database JSON (optional)</span>
+<span class="c1">// saved as 'database.json' in the game-server folder.</span>
+<span class="c1">// This holds your static JSON, which is useful for trivia games</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">database</span><span class="p">();</span>
+
+<span class="c1">//when finished updating, call this to "commit" the state</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">finish</span><span class="p">(</span><span class="nx">gameState</span><span class="p">);</span>
+
+<span class="c1">//kill the game immediately</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">killGame</span><span class="p">();</span>
+
+<span class="c1">//if you detect a bad action, tell system you want it ignored.</span>
+<span class="nx">globals</span><span class="p">.</span><span class="nx">ignore</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="game-state">Game State</h2>
+<p>The Game State consists of several objects:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="state">state</h3>
+<p>This is where you should keep all data that mutates on every action to modify the game board or environment.</p>
+<h4 id="hidden-values">hidden values</h4>
+<p>Inside the <code>state</code> object, you can create variables with <code>_</code> underscore to make them private.</p>
+<p>Example, that hides the deck from sending to clients:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"_deck"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"AS"</span><span class="p">,</span><span class="w"> </span><span class="s2">"AH"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3D"</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="gamestatus">gamestatus</h4>
+<p>The <strong>gamestatus</strong> key is auto-generated by the platform and saved inside the <code>state</code>.</p>
+<p>The possible values are:</p>
+<ol>
+<li><code>pregame</code></li>
+<li><code>starting</code></li>
+<li><code>gamestart</code></li>
+<li><code>gameover</code></li>
+</ol>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"gamestatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamestart"</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Game status is used internally by the platform with the timer to trigger the next gamestatus. Exception is when <code>gamestatus="gamestart"</code>, the timers will cause a "skip" action, for the current player(s) who are next.</p>
+<h3 id="players">players</h3>
+<p>When players are added into the game, they are automatically added into the players object. All players have a <code>shortid</code> that references them inside the Acos databse.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ABCDEF"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JoeFacebook"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"UVWXYZ"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JoeOfTexas"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="ready">ready</h4>
+<p>Your client must trigger an action <code>send('ready', true)</code> when your client front-end is loaded. This is saved into the player's object, and let's the platform know when to trigger a <strong>gamestart</strong> event.</p>
+<h4 id="rank-score">rank &amp; score</h4>
+<p><code>rank</code> is set by you to determine who is in 1st, 2nd, 3rd, ..., nth place for the room. On gameover, the system will update the global player ratings based on this value. Lower is better.</p>
+<p><code>score</code> is set by you to determine how many points the users have earned. This has no purpose unless rank is removed, where scores will then be used to calculate new player ratings. Higher is better.</p>
+<h4 id="name">name</h4>
+<p><code>name</code> is the user's name that was setup when user first logged in.</p>
+<h4 id="hidden-values_1">hidden values</h4>
+<p>Inside the <code>players</code> object, you can create variables with <code>_</code> underscore to make them private.</p>
+<p>Example that hides the user's cards from sharing with other players:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"player"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ABCDEF"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JoeOfTexas"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"_cards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"2S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"5S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"6S"</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="rules">rules</h3>
+<p>Rules are not mandatory, but its a clean way to define the rules of your game. How many rounds, max players, min players. Ideally, these should be static and not change between actions, but you can if you want.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"maxplayers"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"minplayers"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"rounds"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="events">events</h3>
+<p>Events are used to notify of a specific type of state change.</p>
+<h4 id="system-defined-events">system defined events</h4>
+<ul>
+<li><code>pregame</code> - when the first player joins the game</li>
+<li><code>starting</code> - when all players are ready (client front-ends are all loaded)</li>
+<li><code>gamestart</code>- after the starting countdown reaches zero</li>
+<li><code>gameover</code> - when the game ends and room is closed</li>
+</ul>
+<h4 id="custom-events">custom events</h4>
+<p>You can create your own events by defining any key, here we used <code>pick</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"pick"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEF"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"picked"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Or you could do even simpler:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"pick"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="timer">timer</h3>
+<p>The timer helps control the flow of the game. It is important that you always set a timer. Rooms will be destroyed if they do not complete within 1 hour.</p>
+<p>To set a timer, make sure you commit the game state with this format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"set"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The example above sets a timer for 15 seconds.</p>
+<p>The platform will detect the seconds set, and create these values:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1641166075</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>On the client-side, <code>end</code> can be used to calculate timeleft.</p>
+<h3 id="next">next</h3>
+<p>The next object is used to tell the system who is allowed to send an action.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The only required key is the <code>id</code> key. The values can be either <code>*</code> or player's shortid, i.e. <code>ABCDEF</code></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Getting Started" class="md-footer__link md-footer__link--prev" href=".." rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Getting Started
+            </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.361d90f1.min.js"}</script>
+<script src="../assets/javascripts/bundle.289a2a4b.min.js"></script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+</body>
+</html>
