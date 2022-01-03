@@ -1,14 +1,37 @@
-# Dev Concepts
+# Development
 
 Overview of the concepts that make games work on the Acos platform.
 
-## Projects
+## Simulator
 
-### Game Client
+Development of the client and server can be done offline using the [acosgames](https://github.com/acosgames/acosgames) simulator. This simulates the environment used on [acos.games](https://acos.games).
 
-The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js)that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) file does.
+Your code in `game-client` and `game-server` sit on the edge, while the simulator sits in the middle.
 
-#### Send Action
+### State Machine
+
+```mermaid
+graph LR
+  A[client] --> B[Action]
+  B[Action] --> C{WebSocket Server};
+  C --> D[VirtualMachine];
+  D --> E[server];
+  E --> D;
+  D --> C;
+  C --> A;
+```
+
+The client peforms an **action** and the server executes that action. Your game logic results are saved into the [Game State](#game-state) which is just a plain JSON object. The simulator will synchronize the JSON between all connected clients and store the game state for the next action.
+
+!!! note "Note"
+
+    It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, try to use a seed from any data within the [Game State](#game-state).
+
+## Game Client
+
+The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) file does.
+
+### Send Action
 
 Client's can send actions in the following format using the acosg.js `send` function:
 
@@ -38,10 +61,13 @@ globals.error(msg);
 //get the array of actions sent by users or system
 globals.actions();
 
-//get the last gameState object, copy this to a variable and make changes directly to it
+//get the latest Game State JSON
+// copy this to a variable and make changes directly to it
 globals.game();
 
-//get the database JSON
+//get the database JSON (optional)
+// saved as 'database.json' in the game-server folder.
+// This holds your static JSON, which is useful for trivia games
 globals.database();
 
 //when finished updating, call this to "commit" the state
@@ -54,7 +80,7 @@ globals.killGame();
 globals.ignore();
 ```
 
-## Game State Objects
+## Game State
 
 The Game State consists of several objects:
 
@@ -71,7 +97,7 @@ The Game State consists of several objects:
 
 ### state
 
-This is where you should keep all data that mutates on every action that affects the game board or environment.
+This is where you should keep all data that mutates on every action to modify the game board or environment.
 
 #### hidden values
 
@@ -139,9 +165,9 @@ Your client must trigger an action `send('ready', true)` when your client front-
 
 #### rank & score
 
-`rank` is set by you to determine who is in 1st, 2nd, 3rd, ..., nth place. On gameover, the system will update the player ratings based on this value.
+`rank` is set by you to determine who is in 1st, 2nd, 3rd, ..., nth place for the room. On gameover, the system will update the global player ratings based on this value. Lower is better.
 
-`score` is set by your to determine how many points the users have earned. This has no purpose, unless rank is removed, scores are used to calculate new player ratings.
+`score` is set by you to determine how many points the users have earned. This has no purpose unless rank is removed, where scores will then be used to calculate new player ratings. Higher is better.
 
 #### name
 
@@ -167,7 +193,7 @@ Example that hides the user's cards from sharing with other players:
 
 ### rules
 
-Rules are not mandatory, but its a clean way to define the rules of your game. How many rounds, max players, min players. Ideally, these should be static and not change, but you can change between actions if needed.
+Rules are not mandatory, but its a clean way to define the rules of your game. How many rounds, max players, min players. Ideally, these should be static and not change between actions, but you can if you want.
 
 ```json
 {
@@ -181,18 +207,16 @@ Rules are not mandatory, but its a clean way to define the rules of your game. H
 
 ### events
 
-Events are used to notify when an actions occur from a user or the Acos platform
+Events are used to notify of a specific type of state change.
 
-- **pregame**
-  - Triggered when the first player joins the game
-- **starting**
-  - Triggered when all players are ready (client front-ends are all loaded)
-- **gamestart**
-  - Triggered after the starting countdown reaches zero
-- **gameover**
-  - Triggered when the game ends and room is closed
+#### system defined events
 
-**custom events**
+- `pregame` - when the first player joins the game
+- `starting` - when all players are ready (client front-ends are all loaded)
+- `gamestart`- after the starting countdown reaches zero
+- `gameover` - when the game ends and room is closed
+
+#### custom events
 
 You can create your own events by defining any key, here we used `pick`:
 

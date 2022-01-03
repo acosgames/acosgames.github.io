@@ -1,11 +1,23 @@
-site_name: My Docs
+site_name: A cup of skill
 site_url: https://acos.games
 theme:
   name: material
+  logo: img/acos-logo.png
+extra:
+  homepage: https://acos.games
 markdown_extensions:
+  - def_list
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+plugins:
+  - markdownmermaid
+extra_javascript:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
 nav:
   - Getting Started: index.md
-  - Dev Concepts: concepts.md
+  - Development: development.md
