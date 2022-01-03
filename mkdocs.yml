@@ -1,5 +1,6 @@
 site_name: A cup of skill
 site_url: https://acos.games
+repo_url: https://github.com/acosgames
 theme:
   name: material
   logo: img/acos-logo.png
@@ -21,3 +22,4 @@ extra_javascript:
 nav:
   - Getting Started: index.md
   - Development: development.md
+  - Ranking System: ranking.md
