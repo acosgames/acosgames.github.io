@@ -1,11 +1,14 @@
 site_name: A cup of skill
-site_url: https://acos.games
+site_url: https://docs.acos.games
 repo_url: https://github.com/acosgames
 theme:
   name: material
   logo: img/acos-logo.png
 extra:
   homepage: https://acos.games
+  analytics:
+    provider: google
+    property: G-HC09PY1QY2
 markdown_extensions:
   - tables
   - def_list
