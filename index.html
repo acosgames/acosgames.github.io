@@ -228,7 +228,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Tic Tac Toe</strong></td>
+<td><strong>Tic Tac Toe</strong> <br/><code>git clone git@github.com:acosgames/tictactoe.git</code></td>
 <td><img alt="tictactoe" src="img/tictactoe.png" width="64"/></td>
 <td><a href="https://acos.games/g/tictactoe">Play on Acos</a></td>
 <td><a href="https://github.com/acosgames/tictactoe">Github Repo</a></td>
@@ -236,14 +236,17 @@
 </tbody>
 </table>
 <h3 id="copy-game-template">Copy Game Template</h3>
-<p>Clone the repository of game template you selected. Here we will use the <strong>Tic Tac Toe</strong> as an example:</p>
-<p><code>git clone git@github.com:acosgames/tictactoe.git</code></p>
+<p>Clone the repository of game template you selected. Here we will use <strong>Tic Tac Toe</strong> as an example:</p>
+<div class="highlight"><pre><span></span><code>git clone git@github.com:acosgames/tictactoe.git
+</code></pre></div>
 <h3 id="push-to-your-repository">Push to your repository</h3>
-<p>Change the remote url to a new repository. If you want the project to be open source, use the organization repository. If you want to keep it private, create a repository where you want.</p>
+<p>Change the remote url to a new repository. If you want the project to be open source, use the organization repository. If you want to keep it private, create a repository anywhere you want.</p>
 <p>This example will put it in <code>my-new-game</code> repository in the <a href="https://github.com/acosgames">acosgames</a> organization.</p>
-<p><code>git remote set-url origin git@github.com:acosgames/my-new-game</code></p>
+<div class="highlight"><pre><span></span><code>git remote set-url origin git@github.com:acosgames/my-new-game
+</code></pre></div>
 <p>Finally, push a mirror copy to your new repository.</p>
-<p><code>git push -u origin --mirror</code></p>
+<div class="highlight"><pre><span></span><code>git push -u origin --mirror
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note: You must create the game through <a href="https://acos.games/dev">Developer Zone</a> to have repo created in acosgames organization.</p>
@@ -251,7 +254,8 @@
 <h2 id="deploy-game">Deploy Game</h2>
 <p>When you are ready to deploy the game, visit the <a href="https://acos.games/dev">Developer Zone</a>, and find your deployment command.</p>
 <p>Example:</p>
-<p><code>npm run deploy -- tictactoe.FBC4864251084B188F1A6E63F70C38D3</code></p>
+<div class="highlight"><pre><span></span><code>npm run deploy -- tictactoe.FBC4864251084B188F1A6E63F70C38D3
+</code></pre></div>
 <p>This will bundle the Client, Server, and Database (if exists), and upload them to acos.games.</p>
 <h2 id="publish-game">Publish Game</h2>
 <p>The game will be immediately available as an <strong>experimental</strong> version. If you think its ready for production, go to the <a href="https://acos.games/dev">Developer Zone</a> and click <strong>Push to Production</strong>.</p>
