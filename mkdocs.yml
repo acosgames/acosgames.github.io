@@ -7,6 +7,7 @@ theme:
 extra:
   homepage: https://acos.games
 markdown_extensions:
+  - tables
   - def_list
   - admonition
   - pymdownx.details

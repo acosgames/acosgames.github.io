@@ -15,25 +15,32 @@ Choose from the available game templates below:
 
 | Game Templates  |                                                           |                                                |                                                       |
 | --------------- | --------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------- |
-| **Tic Tac Toe** | <img src="img/tictactoe.png" alt="tictactoe" width="64"/> | [Play on Acos](https://acos.games/g/tictactoe) | [Github Repo](https://github.com/acosgames/tictactoe) |
+| **Tic Tac Toe** <br />`git clone git@github.com:acosgames/tictactoe.git` | <img src="img/tictactoe.png" alt="tictactoe" width="64"/> | [Play on Acos](https://acos.games/g/tictactoe) | [Github Repo](https://github.com/acosgames/tictactoe) |
+
 
 ### Copy Game Template
 
-Clone the repository of game template you selected. Here we will use the **Tic Tac Toe** as an example:
+Clone the repository of game template you selected. Here we will use **Tic Tac Toe** as an example:
 
-`git clone git@github.com:acosgames/tictactoe.git`
+```bash
+git clone git@github.com:acosgames/tictactoe.git
+```
 
 ### Push to your repository
 
-Change the remote url to a new repository. If you want the project to be open source, use the organization repository. If you want to keep it private, create a repository where you want.
+Change the remote url to a new repository. If you want the project to be open source, use the organization repository. If you want to keep it private, create a repository anywhere you want.
 
 This example will put it in `my-new-game` repository in the [acosgames](https://github.com/acosgames) organization.
 
-`git remote set-url origin git@github.com:acosgames/my-new-game`
+```bash
+git remote set-url origin git@github.com:acosgames/my-new-game
+```
 
 Finally, push a mirror copy to your new repository.
 
-`git push -u origin --mirror`
+```bash
+git push -u origin --mirror
+```
 
 !!! note "Note"
 
@@ -45,7 +52,9 @@ When you are ready to deploy the game, visit the [Developer Zone](https://acos.g
 
 Example:
 
-`npm run deploy -- tictactoe.FBC4864251084B188F1A6E63F70C38D3`
+```bash
+npm run deploy -- tictactoe.FBC4864251084B188F1A6E63F70C38D3
+```
 
 This will bundle the Client, Server, and Database (if exists), and upload them to acos.games.
 
