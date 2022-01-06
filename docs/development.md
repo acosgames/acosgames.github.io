@@ -27,69 +27,6 @@ The client peforms an **action** and the server executes that action. Your game 
 
     It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, try to use a seed from any data within the [Game State](#game-state).
 
-
----
-
-## Game Client
-
-The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) file does.
-
-!!! note "Note"
-
-    [Click here](#example-game-state) to view an example Game State from Tic Tac Toe.
-
-
-### local object
-
-```js
-"local": {
-    "name": "joe",
-    "rank": 1,
-    "score": 100,
-    "id": "8CCkf",
-    "ready": true,
-    "type": "X"
-}
-```
-
-The platform will automatically add the `local` player object which is identical to the [players](#players) game state for the local player.
-
-### next object
-
-```js
- "next": { "id": "manC6" },
-```
-
-The next object shows which player id is allowed to make the next action.  You should avoid sending if the local player is not in the `id` field.
-
-When the `id` is `'*'`, all players are allowed to submit an action.
-
-### time + latency
-
-```js
-"timer": {
-    "end": 1641441249109,
-    "seconds": 10,
-    "seq": 5
-}
-```
-[Timers](#timer) are very important to keep games fast-paced.  
-
-In order to ensure that players with high latency (400+ms) can feel the same rush of putting in a move at 0.1 seconds, all clients automatically have the [timer.end](#timer) adjusted based on their latency to match server time.
-
-You can use the `seconds`, which is the original time in seconds set by the server, to calculate a percentage of time left.
-
-
-### send action
-
-Client's can send actions in the following format using the [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134) `send` function:
-
-```js
-send("pick", 3);
-```
-
-The first parameter is always a string, second parameter can be any primitive, array, or object type.
-
 -----
 
 ## Game Server
@@ -223,6 +160,70 @@ Triggered when a timer reaches zero.  You should handle this action to forfeit a
   "type": "skip"
 }
 ```
+
+
+---
+
+## Game Client
+
+The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js) file does.
+
+!!! note "Note"
+
+    [Click here](#example-game-state) to view an example Game State from Tic Tac Toe.
+
+
+### local object
+
+```js
+"local": {
+    "name": "joe",
+    "rank": 1,
+    "score": 100,
+    "id": "8CCkf",
+    "ready": true,
+    "type": "X"
+}
+```
+
+The platform will automatically add the `local` player object which is identical to the [players](#players) game state for the local player.
+
+### next object
+
+```js
+ "next": { "id": "manC6" },
+```
+
+The next object shows which player id is allowed to make the next action.  You should avoid sending if the local player is not in the `id` field.
+
+When the `id` is `'*'`, all players are allowed to submit an action.
+
+### time + latency
+
+```js
+"timer": {
+    "end": 1641441249109,
+    "seconds": 10,
+    "seq": 5
+}
+```
+[Timers](#timer) are very important to keep games fast-paced.  
+
+In order to ensure that players with high latency (400+ms) can feel the same rush of putting in a move at 0.1 seconds, all clients automatically have the [timer.end](#timer) adjusted based on their latency to match server time.
+
+You can use the `seconds`, which is the original time in seconds set by the server, to calculate a percentage of time left.
+
+
+### send action
+
+Client's can send actions in the following format using the [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134) `send` function:
+
+```js
+send("pick", 3);
+```
+
+The first parameter is always a string, second parameter can be any primitive, array, or object type.
+
 
 ---
 
