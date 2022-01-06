@@ -3,7 +3,7 @@ site_url: https://docs.acos.games
 repo_url: https://github.com/acosgames
 theme:
   name: material
-  logo: img/acos-logo.png
+  logo: img/acos-logo-xs.png
 extra:
   homepage: https://acos.games
   analytics:

@@ -1,6 +1,8 @@
-# (Acos) A cup of skill
+# A cup of skill (Acos)
 
-Play or develop your own competitive online web game.
+Play or develop your own competitive online web game.  
+
+The platform supports realtime Turn-based and Trivia style games.
 
 You must first become a developer in the [acosgames](https://github.com/acosgames) GitHub Organization. Simply go to [Developer Zone](https://acos.games/dev) on [Acos](https://acos.games/) to start.
 
