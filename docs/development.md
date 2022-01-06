@@ -109,7 +109,7 @@ The type must always be a string.  This string value is provided by the client t
 
 #### **payload**
 
-The payload can be any primitive (int, float, string), array, or object.  It is best to keep these as simple as possible.  Only your server code will look at this value.
+The payload can be any primitive (boolean, int, float, string), array, or object.  It is best to keep these as simple as possible.  Only your server code will look at this value.
 
 
 ### System actions
