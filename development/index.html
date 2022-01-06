@@ -32,7 +32,7 @@
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="A cup of skill" class="md-header__button md-logo" data-md-component="logo" href="https://acos.games" title="A cup of skill">
-<img alt="logo" src="../img/acos-logo.png"/>
+<img alt="logo" src="../img/acos-logo-xs.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
@@ -74,7 +74,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="A cup of skill" class="md-nav__button md-logo" data-md-component="logo" href="https://acos.games" title="A cup of skill">
-<img alt="logo" src="../img/acos-logo.png"/>
+<img alt="logo" src="../img/acos-logo-xs.png"/>
 </a>
     A cup of skill
   </label>
@@ -130,8 +130,23 @@
 <nav aria-label="Game Client" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#local-object">
+    local object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-latency">
+    time + latency
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#send-action">
-    Send Action
+    send action
   </a>
 </li>
 </ul>
@@ -144,10 +159,49 @@
 <nav aria-label="Game Server" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sytem-actions">
-    Sytem actions
+<a class="md-nav__link" href="#player-actions">
+    Player actions
   </a>
-<nav aria-label="Sytem actions" class="md-nav">
+<nav aria-label="Player actions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug">
+    room_slug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeleft">
+    timeleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seq">
+    seq
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-id">
+    user &gt; id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type">
+    type
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payload">
+    payload
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-actions">
+    System actions
+  </a>
+<nav aria-label="System actions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pregame">
@@ -267,6 +321,25 @@
 <a class="md-nav__link" href="#timer">
     timer
   </a>
+<nav aria-label="timer" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#end">
+    end
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seconds">
+    seconds
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seq_1">
+    seq
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#next">
@@ -275,6 +348,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-game-state">
+    Example Game State
+  </a>
 </li>
 </ul>
 </nav>
@@ -319,8 +397,23 @@
 <nav aria-label="Game Client" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#local-object">
+    local object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-latency">
+    time + latency
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#send-action">
-    Send Action
+    send action
   </a>
 </li>
 </ul>
@@ -333,10 +426,49 @@
 <nav aria-label="Game Server" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sytem-actions">
-    Sytem actions
+<a class="md-nav__link" href="#player-actions">
+    Player actions
   </a>
-<nav aria-label="Sytem actions" class="md-nav">
+<nav aria-label="Player actions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug">
+    room_slug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeleft">
+    timeleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seq">
+    seq
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-id">
+    user &gt; id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type">
+    type
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payload">
+    payload
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-actions">
+    System actions
+  </a>
+<nav aria-label="System actions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pregame">
@@ -456,6 +588,25 @@
 <a class="md-nav__link" href="#timer">
     timer
   </a>
+<nav aria-label="timer" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#end">
+    end
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seconds">
+    seconds
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seq_1">
+    seq
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#next">
@@ -464,6 +615,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-game-state">
+    Example Game State
+  </a>
 </li>
 </ul>
 </nav>
@@ -494,13 +650,45 @@
 <p class="admonition-title">Note</p>
 <p>It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, try to use a seed from any data within the <a href="#game-state">Game State</a>.</p>
 </div>
+<hr/>
 <h2 id="game-client">Game Client</h2>
 <p>The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> file does.</p>
-<h3 id="send-action">Send Action</h3>
-<p>Client's can send actions in the following format using the acosg.js <code>send</code> function:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="#example-game-state">Click here</a> to view an example Game State from Tic Tac Toe.</p>
+</div>
+<h3 id="local-object">local object</h3>
+<div class="highlight"><pre><span></span><code><span class="s2">"local"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"joe"</span><span class="p">,</span>
+    <span class="s2">"rank"</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+    <span class="s2">"score"</span><span class="o">:</span> <span class="mf">100</span><span class="p">,</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"8CCkf"</span><span class="p">,</span>
+    <span class="s2">"ready"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"X"</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The platform will automatically add the <code>local</code> player object which is identical to the <a href="#players">players</a> game state for the local player.</p>
+<h3 id="next-object">next object</h3>
+<div class="highlight"><pre><span></span><code> <span class="s2">"next"</span><span class="o">:</span> <span class="p">{</span> <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"manC6"</span> <span class="p">},</span>
+</code></pre></div>
+<p>The next object shows which player id is allowed to make the next action.  You should avoid sending if the local player is not in the <code>id</code> field.</p>
+<p>When the <code>id</code> is <code>'*'</code>, all players are allowed to submit an action.</p>
+<h3 id="time-latency">time + latency</h3>
+<p><div class="highlight"><pre><span></span><code><span class="s2">"timer"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"end"</span><span class="o">:</span> <span class="mf">1641441249109</span><span class="p">,</span>
+    <span class="s2">"seconds"</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+    <span class="s2">"seq"</span><span class="o">:</span> <span class="mf">5</span>
+<span class="p">}</span>
+</code></pre></div>
+<a href="#timer">Timers</a> are very important to keep games fast-paced.  </p>
+<p>In order to ensure that players with high latency (400+ms) can feel the same rush of putting in a move at 0.1 seconds, all clients automatically have the <a href="#timer">timer.end</a> adjusted based on their latency to match server time.</p>
+<p>You can use the <code>seconds</code>, which is the original time in seconds set by the server, to calculate a percentage of time left.</p>
+<h3 id="send-action">send action</h3>
+<p>Client's can send actions in the following format using the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134">acosg.js</a> <code>send</code> function:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">send</span><span class="p">(</span><span class="s2">"pick"</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
 </code></pre></div>
 <p>The first parameter is always a string, second parameter can be any primitive, array, or object type.</p>
+<hr/>
 <h2 id="game-server">Game Server</h2>
 <p>The server is responsible for building the <strong>game state</strong> that is automatically synchronized to all clients.</p>
 <p>There is a helper file used on the game-server side also called <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js">acosg.js</a>. Its a wrapper to help simplify using the globals listed below.</p>
@@ -533,7 +721,33 @@
 <span class="c1">//if you detect a bad action, tell system you want it ignored.</span>
 <span class="nx">globals</span><span class="p">.</span><span class="nx">ignore</span><span class="p">();</span>
 </code></pre></div>
-<h3 id="sytem-actions">Sytem actions</h3>
+<h3 id="player-actions">Player actions</h3>
+<p>All player actions will contain metadata generated by the platform, that identify a user and more.  </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room_slug"</span><span class="p">:</span><span class="s2">"MLR9JN"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timeleft"</span><span class="p">:</span><span class="mi">12066</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"seq"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"user"</span><span class="p">:{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manC6"</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pick"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="room_slug"><strong>room_slug</strong></h4>
+<p>This is the ID of the game room.  It's used mostly by the platform to target the correct room. </p>
+<h4 id="timeleft"><strong>timeleft</strong></h4>
+<p>If there is a timer, this will be how much timeleft in milliseconds before timer hits zero.  It's a convenience so you don't have to calculate yourself. </p>
+<p>To convert to seconds divide by <code>1000</code>.</p>
+<h4 id="seq"><strong>seq</strong></h4>
+<p>Every time a new timer is set, the sequence is incremented by 1.  This helps ensure actions are only processed for the correct sequences.</p>
+<h4 id="user-id"><strong>user &gt; id</strong></h4>
+<p>The user object holds the <code>id</code> of the user.  This is a shortid that can be used inside the "<a href="/development/#players">players</a>" object in the Game State.</p>
+<h4 id="type"><strong>type</strong></h4>
+<p>The type must always be a string.  This string value is provided by the client that you can process in your server code.</p>
+<h4 id="payload"><strong>payload</strong></h4>
+<p>The payload can be any primitive (int, float, string), array, or object.  It is best to keep these as simple as possible.  Only your server code will look at this value.</p>
+<h3 id="system-actions">System actions</h3>
 <p>These actions are triggered automatically by the server</p>
 <h4 id="pregame"><strong>pregame</strong></h4>
 <p>Once the first player has joined the game, this action is triggered immediately.  A timer of 20 seconds will be activated, and if it reaches zero, it will call a <code>noshow</code> action.
@@ -565,6 +779,7 @@
 <span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skip"</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
+<hr/>
 <h2 id="game-state">Game State</h2>
 <p>The Game State consists of several objects:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
@@ -694,15 +909,25 @@
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>The example above sets a timer for 15 seconds.</p>
-<p>The platform will detect the seconds set, and create these values:</p>
+<p>The platform will detect the seconds set, and create <code>end</code> and <code>seconds</code> values:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1641166075</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1641439171453</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"seq"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>On the client-side, <code>end</code> can be used to calculate timeleft.</p>
+<h4 id="end">end</h4>
+<p><code>end</code> is the unix epoch time in milliseconds when the timer should reach zero.</p>
+<p>On the client-side, <code>end</code> is adjusted for latency automatically, and can be used to calculate near perfect timeleft with the following:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">now</span> <span class="o">=</span> <span class="p">(</span><span class="ow">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">getTime</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">timeleft</span> <span class="o">=</span> <span class="nx">timer</span><span class="p">.</span><span class="nx">end</span> <span class="o">-</span> <span class="nx">now</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="seconds">seconds</h4>
+<p><code>seconds</code> shows the original time in seconds set by the server, so you can calculate elapsed percentages as needed.</p>
+<h4 id="seq_1">seq</h4>
+<p><code>seq</code> the current sequence, which is incremented for every new timer that is set.</p>
 <h3 id="next">next</h3>
 <p>The next object is used to tell the system who is allowed to send an action.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
@@ -712,6 +937,57 @@
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>The only required key is the <code>id</code> key. The values can be either <code>*</code> or player's shortid, i.e. <code>ABCDEF</code></p>
+<hr/>
+<h2 id="example-game-state">Example Game State</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"room_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RGTH7D"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"local"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joe"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8CCkf"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X"</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"gamestatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamestart"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"0"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X"</span><span class="p">,</span><span class="w">  </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O"</span><span class="p">,</span><span class="w">  </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X"</span><span class="p">,</span><span class="w">  </span><span class="nt">"4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O"</span><span class="p">,</span><span class="w">  </span><span class="nt">"5"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"6"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X"</span><span class="p">,</span><span class="w">  </span><span class="nt">"7"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">   </span><span class="nt">"8"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"sx"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8CCkf"</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manC6"</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"picked"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"gameover"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1641441249109</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"seq"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"8CCkf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joe"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8CCkf"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X"</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"manC6"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tim"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O"</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 </article>
 </div>
 </div>
