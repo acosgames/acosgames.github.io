@@ -124,35 +124,6 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#game-client">
-    Game Client
-  </a>
-<nav aria-label="Game Client" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#local-object">
-    local object
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#next-object">
-    next object
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#time-latency">
-    time + latency
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#send-action">
-    send action
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#game-server">
     Game Server
   </a>
@@ -230,6 +201,35 @@
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-client">
+    Game Client
+  </a>
+<nav aria-label="Game Client" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-object">
+    local object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-latency">
+    time + latency
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#send-action">
+    send action
+  </a>
 </li>
 </ul>
 </nav>
@@ -391,35 +391,6 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#game-client">
-    Game Client
-  </a>
-<nav aria-label="Game Client" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#local-object">
-    local object
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#next-object">
-    next object
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#time-latency">
-    time + latency
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#send-action">
-    send action
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#game-server">
     Game Server
   </a>
@@ -497,6 +468,35 @@
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-client">
+    Game Client
+  </a>
+<nav aria-label="Game Client" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-object">
+    local object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-latency">
+    time + latency
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#send-action">
+    send action
+  </a>
 </li>
 </ul>
 </nav>
@@ -651,44 +651,6 @@
 <p>It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, try to use a seed from any data within the <a href="#game-state">Game State</a>.</p>
 </div>
 <hr/>
-<h2 id="game-client">Game Client</h2>
-<p>The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> file does.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><a href="#example-game-state">Click here</a> to view an example Game State from Tic Tac Toe.</p>
-</div>
-<h3 id="local-object">local object</h3>
-<div class="highlight"><pre><span></span><code><span class="s2">"local"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"joe"</span><span class="p">,</span>
-    <span class="s2">"rank"</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-    <span class="s2">"score"</span><span class="o">:</span> <span class="mf">100</span><span class="p">,</span>
-    <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"8CCkf"</span><span class="p">,</span>
-    <span class="s2">"ready"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"X"</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>The platform will automatically add the <code>local</code> player object which is identical to the <a href="#players">players</a> game state for the local player.</p>
-<h3 id="next-object">next object</h3>
-<div class="highlight"><pre><span></span><code> <span class="s2">"next"</span><span class="o">:</span> <span class="p">{</span> <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"manC6"</span> <span class="p">},</span>
-</code></pre></div>
-<p>The next object shows which player id is allowed to make the next action.  You should avoid sending if the local player is not in the <code>id</code> field.</p>
-<p>When the <code>id</code> is <code>'*'</code>, all players are allowed to submit an action.</p>
-<h3 id="time-latency">time + latency</h3>
-<p><div class="highlight"><pre><span></span><code><span class="s2">"timer"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"end"</span><span class="o">:</span> <span class="mf">1641441249109</span><span class="p">,</span>
-    <span class="s2">"seconds"</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
-    <span class="s2">"seq"</span><span class="o">:</span> <span class="mf">5</span>
-<span class="p">}</span>
-</code></pre></div>
-<a href="#timer">Timers</a> are very important to keep games fast-paced.  </p>
-<p>In order to ensure that players with high latency (400+ms) can feel the same rush of putting in a move at 0.1 seconds, all clients automatically have the <a href="#timer">timer.end</a> adjusted based on their latency to match server time.</p>
-<p>You can use the <code>seconds</code>, which is the original time in seconds set by the server, to calculate a percentage of time left.</p>
-<h3 id="send-action">send action</h3>
-<p>Client's can send actions in the following format using the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134">acosg.js</a> <code>send</code> function:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">send</span><span class="p">(</span><span class="s2">"pick"</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
-</code></pre></div>
-<p>The first parameter is always a string, second parameter can be any primitive, array, or object type.</p>
-<hr/>
 <h2 id="game-server">Game Server</h2>
 <p>The server is responsible for building the <strong>game state</strong> that is automatically synchronized to all clients.</p>
 <p>There is a helper file used on the game-server side also called <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js">acosg.js</a>. Its a wrapper to help simplify using the globals listed below.</p>
@@ -746,7 +708,7 @@
 <h4 id="type"><strong>type</strong></h4>
 <p>The type must always be a string.  This string value is provided by the client that you can process in your server code.</p>
 <h4 id="payload"><strong>payload</strong></h4>
-<p>The payload can be any primitive (int, float, string), array, or object.  It is best to keep these as simple as possible.  Only your server code will look at this value.</p>
+<p>The payload can be any primitive (boolean, int, float, string), array, or object.  It is best to keep these as simple as possible.  Only your server code will look at this value.</p>
 <h3 id="system-actions">System actions</h3>
 <p>These actions are triggered automatically by the server</p>
 <h4 id="pregame"><strong>pregame</strong></h4>
@@ -779,6 +741,44 @@
 <span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skip"</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
+<hr/>
+<h2 id="game-client">Game Client</h2>
+<p>The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> file does.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="#example-game-state">Click here</a> to view an example Game State from Tic Tac Toe.</p>
+</div>
+<h3 id="local-object">local object</h3>
+<div class="highlight"><pre><span></span><code><span class="s2">"local"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"joe"</span><span class="p">,</span>
+    <span class="s2">"rank"</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+    <span class="s2">"score"</span><span class="o">:</span> <span class="mf">100</span><span class="p">,</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"8CCkf"</span><span class="p">,</span>
+    <span class="s2">"ready"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"X"</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The platform will automatically add the <code>local</code> player object which is identical to the <a href="#players">players</a> game state for the local player.</p>
+<h3 id="next-object">next object</h3>
+<div class="highlight"><pre><span></span><code> <span class="s2">"next"</span><span class="o">:</span> <span class="p">{</span> <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"manC6"</span> <span class="p">},</span>
+</code></pre></div>
+<p>The next object shows which player id is allowed to make the next action.  You should avoid sending if the local player is not in the <code>id</code> field.</p>
+<p>When the <code>id</code> is <code>'*'</code>, all players are allowed to submit an action.</p>
+<h3 id="time-latency">time + latency</h3>
+<p><div class="highlight"><pre><span></span><code><span class="s2">"timer"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"end"</span><span class="o">:</span> <span class="mf">1641441249109</span><span class="p">,</span>
+    <span class="s2">"seconds"</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+    <span class="s2">"seq"</span><span class="o">:</span> <span class="mf">5</span>
+<span class="p">}</span>
+</code></pre></div>
+<a href="#timer">Timers</a> are very important to keep games fast-paced.  </p>
+<p>In order to ensure that players with high latency (400+ms) can feel the same rush of putting in a move at 0.1 seconds, all clients automatically have the <a href="#timer">timer.end</a> adjusted based on their latency to match server time.</p>
+<p>You can use the <code>seconds</code>, which is the original time in seconds set by the server, to calculate a percentage of time left.</p>
+<h3 id="send-action">send action</h3>
+<p>Client's can send actions in the following format using the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134">acosg.js</a> <code>send</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">send</span><span class="p">(</span><span class="s2">"pick"</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
+</code></pre></div>
+<p>The first parameter is always a string, second parameter can be any primitive, array, or object type.</p>
 <hr/>
 <h2 id="game-state">Game State</h2>
 <p>The Game State consists of several objects:</p>
