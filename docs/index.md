@@ -13,40 +13,50 @@ You must first become a developer in the [acosgames](https://github.com/acosgame
 
 ### Start from an existing Game Template
 
-Choose from the available game templates below:
+When creating a game, you can choose from the available game templates
 
 | Game Templates  |                                                           |                                                |                                                       |
 | --------------- | --------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------- |
 | **Tic Tac Toe** <br />`git clone git@github.com:acosgames/tictactoe.git` | <img src="img/tictactoe.png" alt="tictactoe" width="64"/> | [Play on Acos](https://acos.games/g/tictactoe) | [Github Repo](https://github.com/acosgames/tictactoe) |
 
 
-### Copy Game Template
+### After creating your game
 
-Clone the repository of game template you selected. Here we will use **Tic Tac Toe** as an example:
+A new repository matching the `Slug Name` you provided will be created with the game template code.  Simply clone your new repository to get started.
 
 ```bash
 git clone git@github.com:acosgames/tictactoe.git
 ```
 
-### Push to your repository
-
-Change the remote url to a new repository. If you want the project to be open source, use the organization repository. If you want to keep it private, create a repository anywhere you want.
-
-This example will put it in `my-new-game` repository in the [acosgames](https://github.com/acosgames) organization.
-
-```bash
-git remote set-url origin git@github.com:acosgames/my-new-game
-```
-
-Finally, push a mirror copy to your new repository.
-
-```bash
-git push -u origin --mirror
-```
-
 !!! note "Note"
 
     Note: You must create the game through [Developer Zone](https://acos.games/dev) to have repo created in acosgames organization.
+
+## Running the game using simulator
+
+First make sure to install all the packages
+
+```bash
+npm install
+```
+
+To concurrently start the Client, Server, and acosgames Simulator run:
+
+```bash
+npm start
+```
+
+This will run the following:
+
+1. Game Client (ReactJS) with webpack watcher
+    - Browser-Sync to restart browser on file changes for client
+2. Game Server (NodeJS) with webpack watcher
+3. acosgames Simulator
+    - Includes Simulator Client + Simulator Server (NodeJS/Express/vm2)
+
+Your Game Client will run inside an `<iframe>` and your Game Server will run inside the nodejs virtual machine.  
+
+
 
 ## Deploy Game
 
