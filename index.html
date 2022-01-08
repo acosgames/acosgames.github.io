@@ -116,17 +116,17 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#copy-game-template">
-    Copy Game Template
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#push-to-your-repository">
-    Push to your repository
+<a class="md-nav__link" href="#after-creating-your-game">
+    After creating your game
   </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-game-using-simulator">
+    Running the game using simulator
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#deploy-game">
@@ -177,17 +177,17 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#copy-game-template">
-    Copy Game Template
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#push-to-your-repository">
-    Push to your repository
+<a class="md-nav__link" href="#after-creating-your-game">
+    After creating your game
   </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-game-using-simulator">
+    Running the game using simulator
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#deploy-game">
@@ -219,7 +219,7 @@
 <li>A public GitHub repository will be created at <strong>https://github.com/acosgames/&lt;game_slug&gt;</strong> with the <code>Slug Name</code> you specified. You will be added as an admin to the repository.</li>
 </ol>
 <h3 id="start-from-an-existing-game-template">Start from an existing Game Template</h3>
-<p>Choose from the available game templates below:</p>
+<p>When creating a game, you can choose from the available game templates</p>
 <table>
 <thead>
 <tr>
@@ -238,22 +238,34 @@
 </tr>
 </tbody>
 </table>
-<h3 id="copy-game-template">Copy Game Template</h3>
-<p>Clone the repository of game template you selected. Here we will use <strong>Tic Tac Toe</strong> as an example:</p>
+<h3 id="after-creating-your-game">After creating your game</h3>
+<p>A new repository matching the <code>Slug Name</code> you provided will be created with the game template code.  Simply clone your new repository to get started.</p>
 <div class="highlight"><pre><span></span><code>git clone git@github.com:acosgames/tictactoe.git
-</code></pre></div>
-<h3 id="push-to-your-repository">Push to your repository</h3>
-<p>Change the remote url to a new repository. If you want the project to be open source, use the organization repository. If you want to keep it private, create a repository anywhere you want.</p>
-<p>This example will put it in <code>my-new-game</code> repository in the <a href="https://github.com/acosgames">acosgames</a> organization.</p>
-<div class="highlight"><pre><span></span><code>git remote set-url origin git@github.com:acosgames/my-new-game
-</code></pre></div>
-<p>Finally, push a mirror copy to your new repository.</p>
-<div class="highlight"><pre><span></span><code>git push -u origin --mirror
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note: You must create the game through <a href="https://acos.games/dev">Developer Zone</a> to have repo created in acosgames organization.</p>
 </div>
+<h2 id="running-the-game-using-simulator">Running the game using simulator</h2>
+<p>First make sure to install all the packages</p>
+<div class="highlight"><pre><span></span><code>npm install
+</code></pre></div>
+<p>To concurrently start the Client, Server, and acosgames Simulator run:</p>
+<div class="highlight"><pre><span></span><code>npm start
+</code></pre></div>
+<p>This will run the following:</p>
+<ol>
+<li>Game Client (ReactJS) with webpack watcher<ul>
+<li>Browser-Sync to restart browser on file changes for client</li>
+</ul>
+</li>
+<li>Game Server (NodeJS) with webpack watcher</li>
+<li>acosgames Simulator<ul>
+<li>Includes Simulator Client + Simulator Server (NodeJS/Express/vm2)</li>
+</ul>
+</li>
+</ol>
+<p>Your Game Client will run inside an <code>&lt;iframe&gt;</code> and your Game Server will run inside the nodejs virtual machine.  </p>
 <h2 id="deploy-game">Deploy Game</h2>
 <p>When you are ready to deploy the game, visit the <a href="https://acos.games/dev">Developer Zone</a>, and find your deployment command.</p>
 <p>Example:</p>
