@@ -18,6 +18,8 @@ When creating a game, you can choose from the available game templates
 | Game Templates  |                                                           |                                                |                                                       |
 | --------------- | --------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------- |
 | **Tic Tac Toe** <br />`git clone git@github.com:acosgames/tictactoe.git` | <img src="img/tictactoe.png" alt="tictactoe" width="64"/> | [Play on Acos](https://acos.games/g/tictactoe) | [Github Repo](https://github.com/acosgames/tictactoe) |
+| **Advanced Tic Tac Toe** <br />`git clone git@github.com:acosgames/advtictactoe.git` | <img src="img/advtictactoe.png" alt="advtictactoe" width="64"/> | [Play on Acos](https://acos.games/g/advtictactoe) | [Github Repo](https://github.com/acosgames/tictactoe) |
+| **Anime Trivia** <br />`git clone git@github.com:acosgames/anime-trivia-simple.git` | <img src="img/anime-trivia-simple.png" alt="anime-trivia-simple" width="64"/> | [Play on Acos](https://acos.games/g/anime-trivia-simple) | [Github Repo](https://github.com/acosgames/anime-trivia-simple) |
 
 
 ### After creating your game
