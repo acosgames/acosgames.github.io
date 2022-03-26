@@ -1,4 +1,6 @@
-# A cup of skill (Acos)
+# ACOS Documentation
+
+<img src="img/acos-logo-combined.png" alt="checkers" width="400"/>
 
 Play or develop your own competitive online web game.  
 

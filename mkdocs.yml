@@ -2,8 +2,9 @@ site_name: A cup of skill
 site_url: https://docs.acos.games
 repo_url: https://github.com/acosgames
 theme:
+  favicon: img/favicon.ico
   name: material
-  logo: img/acos-logo-xs.png
+  logo: img/ACOS-docs-icon3.png
 extra:
   homepage: https://acos.games
   analytics:
