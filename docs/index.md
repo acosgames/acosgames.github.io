@@ -1,6 +1,6 @@
 # ACOS Documentation
 
-<img src="img/acos-logo-combined.png" alt="checkers" width="400"/>
+[<img src="img/acos-logo-combined.png" alt="checkers" width="400"/>](https://acos.games/)
 
 Play or develop your own competitive online web game.  
 
