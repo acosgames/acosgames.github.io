@@ -638,23 +638,23 @@
 <p>Your code in <code>game-client</code> and <code>game-server</code> sit on the edge, while the simulator sits in the middle.</p>
 <h3 id="state-machine">State Machine</h3>
 <div class="mermaid">graph LR
-  A[client] --&gt; B[Action]
+  A[game-client] --&gt; B[Action]
   B[Action] --&gt; C{WebSocket Server};
   C --&gt; D[VirtualMachine];
-  D --&gt; E[server];
+  D --&gt; E[game-server];
   E --&gt; D;
   D --&gt; C;
   C --&gt; A;</div>
-<p>The client peforms an <strong>action</strong> and the server executes that action. Your game logic results are saved into the <a href="#game-state">Game State</a> which is just a plain JSON object. The simulator will synchronize the JSON between all connected clients and store the game state for the next action.</p>
+<p>The game-client peforms an <strong>action</strong> and the game-server executes that action. Your game logic results are saved into the <a href="#game-state">Game State</a> which is just a plain JSON object. The simulator will synchronize the JSON between all connected clients and store the game state for the next action.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, try to use a seed from any data within the <a href="#game-state">Game State</a>.</p>
 </div>
 <hr/>
 <h2 id="game-server">Game Server</h2>
-<p>The server is responsible for building the <strong>game state</strong> that is automatically synchronized to all clients.</p>
+<p>The server is responsible for building the <strong>game state</strong> that is automatically synchronized to all clients.  Server script will be executed once for every action received.</p>
 <p>There is a helper file used on the game-server side also called <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js">acosg.js</a>. Its a wrapper to help simplify using the globals listed below.</p>
-<p>See the <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/index.js">index.js</a> and <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/game.js">game.js</a> for the usage of the helper file.</p>
+<p>See example usage in <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/index.js">index.js</a> and <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/game.js">game.js</a> which use the helper file to keep things organized.</p>
 <p>Your server code will be run inside a JS virtual machine, and you will have access to the <strong>globals</strong> object.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//log a message, only available in simulator</span>
 <span class="nx">globals</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
