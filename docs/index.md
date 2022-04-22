@@ -2,7 +2,7 @@
 
 [<img src="img/acos-logo-combined.png" alt="checkers" width="400"/>](https://acos.games/)
 
-Play or develop your own competitive online web game.  
+Create your own web game using JavaScript frontend and NodeJS backend all driven by JSON.
 
 The platform supports realtime Turn-based and Trivia style games.
 

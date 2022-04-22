@@ -12,16 +12,16 @@ Your code in `game-client` and `game-server` sit on the edge, while the simulato
 
 ```mermaid
 graph LR
-  A[client] --> B[Action]
+  A[game-client] --> B[Action]
   B[Action] --> C{WebSocket Server};
   C --> D[VirtualMachine];
-  D --> E[server];
+  D --> E[game-server];
   E --> D;
   D --> C;
   C --> A;
 ```
 
-The client peforms an **action** and the server executes that action. Your game logic results are saved into the [Game State](#game-state) which is just a plain JSON object. The simulator will synchronize the JSON between all connected clients and store the game state for the next action.
+The game-client peforms an **action** and the game-server executes that action. Your game logic results are saved into the [Game State](#game-state) which is just a plain JSON object. The simulator will synchronize the JSON between all connected clients and store the game state for the next action.
 
 !!! note "Note"
 
@@ -31,11 +31,11 @@ The client peforms an **action** and the server executes that action. Your game 
 
 ## Game Server
 
-The server is responsible for building the **game state** that is automatically synchronized to all clients.
+The server is responsible for building the **game state** that is automatically synchronized to all clients.  Server script will be executed once for every action received.
 
 There is a helper file used on the game-server side also called [acosg.js](https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js). Its a wrapper to help simplify using the globals listed below.
 
-See the [index.js](https://github.com/acosgames/tictactoe/blob/main/game-server/index.js) and [game.js](https://github.com/acosgames/tictactoe/blob/main/game-server/game.js) for the usage of the helper file.
+See example usage in [index.js](https://github.com/acosgames/tictactoe/blob/main/game-server/index.js) and [game.js](https://github.com/acosgames/tictactoe/blob/main/game-server/game.js) which use the helper file to keep things organized.
 
 Your server code will be run inside a JS virtual machine, and you will have access to the **globals** object.
 
