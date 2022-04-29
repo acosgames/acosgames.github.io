@@ -6,7 +6,7 @@ Create your own web game using JavaScript frontend and NodeJS backend all driven
 
 The platform supports realtime Turn-based and Trivia style games.  
 
-Focus on gameplay, let us do everything else for free at scale.
+Focus on gameplay, let the platform handle everything else for free at scale.
 
 ## Getting Started
 
@@ -23,9 +23,10 @@ When creating a game in Developer Zone, you can choose from the available game t
 
 | Game Templates  |                                                           |                                                |                                                       |
 | --------------- | --------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------- |
-| **Tic Tac Toe** <br />`git clone git@github.com:acosgames/tictactoe.git` | <img src="img/tictactoe.png" alt="tictactoe" width="64"/> | [Play on ACOS](https://acos.games/g/tictactoe) | [Github Repo](https://github.com/acosgames/tictactoe) |
-| **Anime Trivia** <br />`git clone git@github.com:acosgames/anime-trivia-simple.git` | <img src="img/anime-trivia-simple.png" alt="anime-trivia-simple" width="64"/> | [Play on ACOS](https://acos.games/g/anime-trivia-simple) | [Github Repo](https://github.com/acosgames/anime-trivia-simple) |
-| **Checkers** <br />`git clone git@github.com:acosgames/checkers.git` | <img src="img/checkers.png" alt="checkers" width="64"/> | [Play on ACOS](https://acos.games/g/checkers) | [Github Repo](https://github.com/acosgames/checkers) |
+| **Tic Tac Toe** <br />`git clone git@github.com:acosgames/tictactoe.git`<br />Built with React | <img src="img/tictactoe.png" alt="tictactoe" width="64"/> | [Play on ACOS](https://acos.games/g/tictactoe) | [Github Repo](https://github.com/acosgames/tictactoe) |
+| **Anime Trivia** <br />`git clone git@github.com:acosgames/anime-trivia-simple.git`<br />Built with React | <img src="img/anime-trivia-simple.png" alt="anime-trivia-simple" width="64"/> | [Play on ACOS](https://acos.games/g/anime-trivia-simple) | [Github Repo](https://github.com/acosgames/anime-trivia-simple) |
+| **Checkers** <br />`git clone git@github.com:acosgames/checkers.git`<br />Built with React | <img src="img/checkers.png" alt="checkers" width="64"/> | [Play on ACOS](https://acos.games/g/checkers) | [Github Repo](https://github.com/acosgames/checkers) |
+| **Memorize Up** <br />`git clone git@github.com:acosgames/memorize-up.git`<br />Built with React | <img src="img/memorize-up.png" alt="checkers" width="64"/> | [Play on ACOS](https://acos.games/g/memorize-up) | [Github Repo](https://github.com/acosgames/memorize-up) |
 
 
 ### After creating your game
