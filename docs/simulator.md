@@ -50,17 +50,7 @@ The simulator gives users these features:
 5. Game Settings management, to specify screen type, screen size, player counts, team counts, and team configuration.
 
 
-## Deployment
 
-Deployment at this time is done from the command line.  You will need your deploy command which is provided in the [Developer Zone](https://acos.games/dev).  
-
-The following files will be uploaded:
-
-1. `./builds/server/server.bundle.js`
-2. `./builds/client/client.bundle.js`
-3. `./builds/client/assets/*`  - all asset files in this folder, excluding sub-folders
-4. `./game-server/database.json` - optional json database that is immutable 
-5. `./game-settings.json` - game settings configured from the simulator UI
 
 
 

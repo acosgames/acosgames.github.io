@@ -48,13 +48,13 @@ When creating a game in [Developer Zone](https://acos.games/dev), you can choose
 
 A new repository matching the `game_slug` you provided will be created in [acosgames](https://github.com/acosgames) organization with the game template code.  You are granted admin access to this repository.
 
-Simply clone your new repository to get started.  
+Navigate into the game management page and find your git clone command to copy.  
 
 ```bash
 git clone git@github.com:acosgames/game_slug.git
 ```
 
-You will see directory structure like below.  
+You will see directory structure like below once you clone to your system. 
 
 <img src="img/devzone-screenshot3.png" alt="checkers" width="300"/>
 
@@ -113,15 +113,23 @@ This is the preferred method for running your code, as it will allow you to prop
 
 ## Deploy Game
 
-When you are ready to deploy the game, visit the [Developer Zone](https://acos.games/dev), and find your deployment command in your game management page.
+Deployment at this time is done from the command-line only.  You will need your deploy command which is provided in the [Developer Zone](https://acos.games/dev) inside your game management page.  
 
-Example:
+Example command:
 
 ```bash
 npm run deploy -- tictactoe.FBC4864251084B188F1A6E63F70C38D3
 ```
 
-This will build your code into *.js bundles, and upload them to acos.games.  Each deployment is automatically versioned by an incrementing number which can be used to publish specific version.  
+Each of our game examples will build your code into *.js bundles, and upload them to acos.games.  Each deployment is automatically versioned by an incrementing number which can be used to publish specific version.  
+
+The following files may be uploaded:
+
+1. `./builds/server/server.bundle.js`
+2. `./builds/client/client.bundle.js`
+3. `./builds/client/assets/*`  - all asset files in this folder, excluding sub-folders
+4. `./game-server/database.json` - optional json database that is immutable 
+5. `./game-settings.json` - game settings configured from the simulator UI
 
 ## Publish Game
 

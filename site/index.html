@@ -349,10 +349,10 @@ You will be added as an admin to the github repository.
 </table>
 <h3 id="after-creating-your-game">After creating your game</h3>
 <p>A new repository matching the <code>game_slug</code> you provided will be created in <a href="https://github.com/acosgames">acosgames</a> organization with the game template code.  You are granted admin access to this repository.</p>
-<p>Simply clone your new repository to get started.  </p>
+<p>Navigate into the game management page and find your git clone command to copy.  </p>
 <div class="highlight"><pre><span></span><code>git clone git@github.com:acosgames/game_slug.git
 </code></pre></div>
-<p>You will see directory structure like below.  </p>
+<p>You will see directory structure like below once you clone to your system. </p>
 <p><img alt="checkers" src="img/devzone-screenshot3.png" width="300"/></p>
 <p><code>builds</code> folder has the development and production builds for both client and server, including the webpack configs.</p>
 <p><code>game-client</code> has the frontend code in React for our game examples.</p>
@@ -389,11 +389,19 @@ You will be added as an admin to the github repository.
 </code></pre></div>
 <p>This is the preferred method for running your code, as it will allow you to properly close the concurrent processes created for simulator, client, and server. </p>
 <h2 id="deploy-game">Deploy Game</h2>
-<p>When you are ready to deploy the game, visit the <a href="https://acos.games/dev">Developer Zone</a>, and find your deployment command in your game management page.</p>
-<p>Example:</p>
+<p>Deployment at this time is done from the command-line only.  You will need your deploy command which is provided in the <a href="https://acos.games/dev">Developer Zone</a> inside your game management page.  </p>
+<p>Example command:</p>
 <div class="highlight"><pre><span></span><code>npm run deploy -- tictactoe.FBC4864251084B188F1A6E63F70C38D3
 </code></pre></div>
-<p>This will build your code into *.js bundles, and upload them to acos.games.  Each deployment is automatically versioned by an incrementing number which can be used to publish specific version.  </p>
+<p>Each of our game examples will build your code into *.js bundles, and upload them to acos.games.  Each deployment is automatically versioned by an incrementing number which can be used to publish specific version.  </p>
+<p>The following files may be uploaded:</p>
+<ol>
+<li><code>./builds/server/server.bundle.js</code></li>
+<li><code>./builds/client/client.bundle.js</code></li>
+<li><code>./builds/client/assets/*</code>  - all asset files in this folder, excluding sub-folders</li>
+<li><code>./game-server/database.json</code> - optional json database that is immutable </li>
+<li><code>./game-settings.json</code> - game settings configured from the simulator UI</li>
+</ol>
 <h2 id="publish-game">Publish Game</h2>
 <p>When you think the game is ready for production, go to the <a href="https://acos.games/dev">Developer Zone</a> and click <strong>Push to Production</strong> for that game.  You can easily change which version is deployed from the game management page.</p>
 </article>

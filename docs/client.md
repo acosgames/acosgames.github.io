@@ -69,7 +69,7 @@ All assets when being deployed must be in the `game_slug/builds/client/assets` f
 
 ### Client Limitations
 
-Your client will be have origin policy that prevents it from accessing many outside resources.  Currently, we have this policy:
+Your client will have an origin policy that prevents it from accessing many outside resources.  Currently, we have this policy:
 
 ```html
 <meta
@@ -83,7 +83,7 @@ Have suggestions that you want whitelisted?  Talk to us on [Discord](https://dis
 
 ## Client relevant game state
 
-The gamestate object in this example will have all these objects from [Game State](/gamestate/#example-game-state-tictactoe)
+The gamestate object received from [message listener](/client/#attaching-to-message-listener) will have all these objects from [Game State](/gamestate/#example-game-state-tictactoe)
 
 ```json
 {
