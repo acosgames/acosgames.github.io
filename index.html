@@ -250,6 +250,7 @@
 <li>Create a new game inside the <a href="https://acos.games/dev">Developer Zone</a>.</li>
 <li>You may start from an existing game template or a blank template.  I recommend starting from existing template.</li>
 </ol>
+<p><img alt="checkers" src="img/devzone-screenshot2.png" width="800"/></p>
 <!-- 2. A public GitHub repository will be created at:
 <div class="highlight"><pre><span></span><code> https://github.com/acosgames/game_slug
 </code></pre></div>
@@ -259,6 +260,7 @@ You will be added as an admin to the github repository.
 
     Check out the Game Templates below to explore and run our game examples without signing up!
  -->
+<hr/>
 <h2 id="start-from-an-existing-game-template">Start from an existing Game Template</h2>
 <p>When creating a game in <a href="https://acos.games/dev">Developer Zone</a>, you can choose from the available game templates</p>
 <table>
@@ -302,6 +304,13 @@ You will be added as an admin to the github repository.
 <p>Simply clone your new repository to get started.  </p>
 <div class="highlight"><pre><span></span><code>git clone git@github.com:acosgames/game_slug.git
 </code></pre></div>
+<p>You will see directory structure like below.  </p>
+<p><img alt="checkers" src="img/devzone-screenshot3.png" width="300"/></p>
+<p><code>builds</code> folder has the development and production builds for both client and server, including the webpack configs.</p>
+<p><code>game-client</code> has the frontend code in React for our game examples.</p>
+<p><code>game-server</code> has the backend code using JavaScript that taps into our <code>globals</code> functions.</p>
+<p><code>game-settings.json</code> will configure the screen size, min/max players and team configurations.</p>
+<hr/>
 <h2 id="running-the-game-using-simulator">Running the game using simulator</h2>
 <p>After cloning, navigate to the folder in a terminal and make sure to install the packages</p>
 <div class="highlight"><pre><span></span><code>npm install
