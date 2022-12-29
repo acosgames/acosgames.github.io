@@ -133,6 +133,30 @@
 <a class="md-nav__link" href="#running-the-game-using-simulator">
     Running the game using simulator
   </a>
+<nav aria-label="Running the game using simulator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nodejs-16-or-18">
+    NodeJS 16+ or 18+
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install">
+    Install
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run">
+    Run
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debug-with-vscode-debug-add-to-launchjson">
+    Debug with VSCode Debug, add to launch.json
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#deploy-game">
@@ -154,17 +178,17 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="server/">
-        - Server
+        - game-server
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="client/">
-        - Client
+        - game-client
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="gamestate/">
-        - Game State
+        - game state
       </a>
 </li>
 <li class="md-nav__item">
@@ -214,6 +238,30 @@
 <a class="md-nav__link" href="#running-the-game-using-simulator">
     Running the game using simulator
   </a>
+<nav aria-label="Running the game using simulator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nodejs-16-or-18">
+    NodeJS 16+ or 18+
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install">
+    Install
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run">
+    Run
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debug-with-vscode-debug-add-to-launchjson">
+    Debug with VSCode Debug, add to launch.json
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#deploy-game">
@@ -312,9 +360,13 @@ You will be added as an admin to the github repository.
 <p><code>game-settings.json</code> will configure the screen size, min/max players and team configurations.</p>
 <hr/>
 <h2 id="running-the-game-using-simulator">Running the game using simulator</h2>
+<h3 id="nodejs-16-or-18">NodeJS 16+ or 18+</h3>
+<p>NodeJS 16+ will work, but we recommend NodeJS 18+</p>
+<h3 id="install"><strong>Install</strong></h3>
 <p>After cloning, navigate to the folder in a terminal and make sure to install the packages</p>
 <div class="highlight"><pre><span></span><code>npm install
 </code></pre></div>
+<h3 id="run"><strong>Run</strong></h3>
 <p>To start the simulator with your client and server code:</p>
 <div class="highlight"><pre><span></span><code>npm start
 </code></pre></div>
@@ -327,6 +379,15 @@ You will be added as an admin to the github repository.
 </li>
 <li><code>game-server</code> (NodeJS) with webpack watcher</li>
 </ol>
+<h3 id="debug-with-vscode-debug-add-to-launchjson"><strong>Debug with VSCode Debug, add to launch.json</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm start"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Launch Tic Tac Toe"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"launch"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node-terminal"</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+</code></pre></div>
+<p>This is the preferred method for running your code, as it will allow you to properly close the concurrent processes created for simulator, client, and server. </p>
 <h2 id="deploy-game">Deploy Game</h2>
 <p>When you are ready to deploy the game, visit the <a href="https://acos.games/dev">Developer Zone</a>, and find your deployment command in your game management page.</p>
 <p>Example:</p>

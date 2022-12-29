@@ -8,7 +8,7 @@
 <link href="https://docs.acos.games/server/" rel="canonical"/>
 <link href="../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>- Server - ACOS Documentation</title>
+<title>- game-server - ACOS Documentation</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <meta content="#4051b5" name="theme-color"/>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              - Server
+              - game-server
             
           </span>
 </div>
@@ -103,11 +103,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          - Server
+          - game-server
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        - Server
+        - game-server
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -121,41 +121,70 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#how-it-works">
+    How it works
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#globals">
     Globals
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#replays">
-    Replays
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#player-actions">
-    Player actions
-  </a>
-<nav aria-label="Player actions" class="md-nav">
+<nav aria-label="Globals" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#room_slug">
-    room_slug
+<a class="md-nav__link" href="#globalslogmsg">
+    globals.log(msg)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#timeleft">
-    timeleft
+<a class="md-nav__link" href="#globalserrormsg">
+    globals.error(msg)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sequence">
-    sequence
+<a class="md-nav__link" href="#globalsactions">
+    globals.actions()
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#user-id">
-    user &gt; id
+<a class="md-nav__link" href="#globalsgame">
+    globals.game()
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsrandom">
+    globals.random()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsdatabase">
+    globals.database()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsfinishgamestate">
+    globals.finish(gameState)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalskillgame">
+    globals.killGame()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsignore">
+    globals.ignore()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-json-server-perspective">
+    Action JSON (Server Perspective)
+  </a>
+<nav aria-label="Action JSON (Server Perspective)" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#type">
     type
@@ -164,6 +193,31 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#payload">
     payload
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeseq">
+    timeseq
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeleft">
+    timeleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug">
+    room_slug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userid">
+    user.id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userteamid">
+    user.teamid
   </a>
 </li>
 </ul>
@@ -208,12 +262,12 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../client/">
-        - Client
+        - game-client
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gamestate/">
-        - Game State
+        - game state
       </a>
 </li>
 <li class="md-nav__item">
@@ -241,41 +295,70 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#how-it-works">
+    How it works
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#globals">
     Globals
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#replays">
-    Replays
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#player-actions">
-    Player actions
-  </a>
-<nav aria-label="Player actions" class="md-nav">
+<nav aria-label="Globals" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#room_slug">
-    room_slug
+<a class="md-nav__link" href="#globalslogmsg">
+    globals.log(msg)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#timeleft">
-    timeleft
+<a class="md-nav__link" href="#globalserrormsg">
+    globals.error(msg)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sequence">
-    sequence
+<a class="md-nav__link" href="#globalsactions">
+    globals.actions()
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#user-id">
-    user &gt; id
+<a class="md-nav__link" href="#globalsgame">
+    globals.game()
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsrandom">
+    globals.random()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsdatabase">
+    globals.database()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsfinishgamestate">
+    globals.finish(gameState)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalskillgame">
+    globals.killGame()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsignore">
+    globals.ignore()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-json-server-perspective">
+    Action JSON (Server Perspective)
+  </a>
+<nav aria-label="Action JSON (Server Perspective)" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#type">
     type
@@ -284,6 +367,31 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#payload">
     payload
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeseq">
+    timeseq
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeleft">
+    timeleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug">
+    room_slug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userid">
+    user.id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userteamid">
+    user.teamid
   </a>
 </li>
 </ul>
@@ -333,72 +441,86 @@
 <a class="md-content__button md-icon" href="https://github.com/acosgames/edit/master/docs/server.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>- Server</h1>
+<h1>- game-server</h1>
 <h2 id="overview">Overview</h2>
-<p>Your server code is responsible for building the <strong>state</strong> that is automatically synchronized to all clients.  Your script will be executed once for every action received.</p>
+<p>Your server code in <code>game-server</code> folder is responsible for building the <strong>state</strong> that is automatically synchronized to all clients.  Your script will be executed once for every action received.</p>
 <p>Our game examples use a helper file in the game-server folder called <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js">acosg.js</a>. Its a wrapper for the globals below to help simplify usage.</p>
 <p>See example usage in <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/index.js">index.js</a> and <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/game.js">game.js</a> which use the helper file to keep things organized.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only pure JavaScript code is allowed from <code>npm</code> packages.  The server code will be bundled into a single <code>server.bundle.dev.js</code> for local development and <code>server.bundle.js</code> for production deployment.</p>
+</div>
+<h2 id="how-it-works">How it works</h2>
+<p>Your server code will run inside <a href="https://github.com/patriksimek/vm2">vm2</a>.  </p>
+<p>This prevents using code like <code>async</code>, <code>await</code>, <code>eval</code>, <code>wasm</code>, and many NodeJS standard packages like <code>fs</code> and <code>request</code>.</p>
+<hr/>
 <h2 id="globals">Globals</h2>
-<p>Your server code will be run inside a JS virtual machine, and you will have access to the <strong>globals</strong> object.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//log a message, only available in simulator</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
-
-<span class="c1">//log an error, only available in simulator</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
-
-<span class="c1">//get the array of actions sent by users or system</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">actions</span><span class="p">();</span><span class="w"></span>
-
-<span class="c1">//gets a copy of the game state in JSON format</span><span class="w"></span>
-<span class="c1">// save this to a variable and make changes directly to it</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">game</span><span class="p">();</span><span class="w"></span>
-
-<span class="c1">//discrete random number between 0 and 1</span><span class="w"></span>
-<span class="c1">// is seeded based on room data</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span><span class="w"></span>
-
-<span class="c1">//get the database JSON (optional)</span><span class="w"></span>
-<span class="c1">// saved as 'database.json' in the game-server folder.</span><span class="w"></span>
-<span class="c1">// This holds your static JSON, which is useful for trivia games</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">database</span><span class="p">();</span><span class="w"></span>
-
-<span class="c1">//when finished updating, call this to "commit" the state</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">finish</span><span class="p">(</span><span class="nx">gameState</span><span class="p">);</span><span class="w"></span>
-
-<span class="c1">//kill the game immediately</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">killGame</span><span class="p">();</span><span class="w"></span>
-
-<span class="c1">//if you detect a bad action, tell system you want it ignored.</span><span class="w"></span>
-<span class="nx">globals</span><span class="p">.</span><span class="nx">ignore</span><span class="p">();</span><span class="w"></span>
-</code></pre></div>
-<h2 id="replays">Replays</h2>
-<p>All games will have replays for every match.  Use the simulator to ensure that your replay works for both players and spectators.</p>
-<h2 id="player-actions">Player actions</h2>
+<p>Your server code will have access to the <strong>globals</strong> object when run inside the vm.</p>
+<h3 id="globalslogmsg"><strong><code>globals.log(msg)</code></strong></h3>
+<ul>
+<li><strong><code>msg</code></strong> - single argument for output</li>
+</ul>
+<p>only available in simulator, ignored on acos.games </p>
+<h3 id="globalserrormsg"><strong><code>globals.error(msg)</code></strong></h3>
+<ul>
+<li><strong><code>msg</code></strong> - single argument for output</li>
+</ul>
+<p>only available in simulator, ignored on acos.games </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>globals.log and globals.error do not work like console.log and console.error, instead only a single argument is allowed</p>
+</div>
+<h3 id="globalsactions"><strong><code>globals.actions()</code></strong></h3>
+<p>get the array of actions sent by users or system</p>
+<p>View example <a href="#action-json-server-perspective">action</a> from server perspective</p>
+<h3 id="globalsgame"><strong><code>globals.game()</code></strong></h3>
+<p>gets a copy of the game state in JSON format save this to a variable and make changes directly to it</p>
+<p>View example <a href="/gamestate/#server-perspective-tictactoe">game state</a> from server perspective</p>
+<h3 id="globalsrandom"><strong><code>globals.random()</code></strong></h3>
+<p>discrete random number between 0 and 1 is seeded based on room data</p>
+<h3 id="globalsdatabase"><strong><code>globals.database()</code></strong></h3>
+<p>get the database JSON (optional)</p>
+<p>Save a <code>database.json</code> file in the game-server folder to use this feature.  This holds your static JSON, which is useful for large content, so it is not bundled into the script.</p>
+<h3 id="globalsfinishgamestate"><strong><code>globals.finish(gameState)</code></strong></h3>
+<ul>
+<li><strong><code>gameState</code></strong> - the final game state you updated from <a href="#globalsgame">globals.game()</a></li>
+</ul>
+<p>when finished all the updates for an action, call this to "commit" the state</p>
+<h3 id="globalskillgame"><strong><code>globals.killGame()</code></strong></h3>
+<p>kill the game immediately</p>
+<h3 id="globalsignore"><strong><code>globals.ignore()</code></strong></h3>
+<p>if you detect a bad action, tell system you want it ignored.</p>
+<hr/>
+<h2 id="action-json-server-perspective">Action JSON (Server Perspective)</h2>
 <p>All player actions will contain metadata generated by the platform, that identify a user and more.  </p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"room_slug"</span><span class="p">:</span><span class="s2">"MLR9JN"</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"timeleft"</span><span class="p">:</span><span class="mi">12066</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"sequence"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"user"</span><span class="p">:{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manC6"</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"pick"</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pick"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timeseq"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timeleft"</span><span class="p">:</span><span class="w"> </span><span class="mi">29000</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HCTJM8"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iobYl"</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"teamid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VAD3R3"</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h4 id="room_slug"><code>room_slug</code></h4>
-<p>This is the ID of the game room.  It's used mostly by the platform to target the correct room. </p>
-<h4 id="timeleft"><code>timeleft</code></h4>
-<p>If there is a timer, this will be how much timeleft in milliseconds before timer hits zero.  It's a convenience so you don't have to calculate yourself. </p>
-<p>To convert to seconds divide by <code>1000</code>.</p>
-<h4 id="sequence"><code>sequence</code></h4>
-<p>Every time a new timer is set, the sequence is incremented by 1.  This helps ensure actions are only processed for the correct sequences.</p>
-<h4 id="user-id"><code>user</code> &gt; <code>id</code></h4>
-<p>The user object holds the <code>id</code> of the user.  This is a shortid that can be used inside the "<a href="/development/#players">players</a>" object in the Game State.</p>
 <h4 id="type"><code>type</code></h4>
 <p>The type must always be a string.  This string value is provided by the client that you can process in your server code.</p>
 <h4 id="payload"><code>payload</code></h4>
 <p>The payload can be any primitive (boolean, int, float, string), array, or object.  It is best to keep these as simple as possible.  Only your server code will look at this value.</p>
+<h4 id="timeseq"><code>timeseq</code></h4>
+<p>Every time a new timer is set, the sequence is incremented by 1.  This helps ensure actions are only processed for the correct sequences.</p>
+<h4 id="timeleft"><code>timeleft</code></h4>
+<p>If there is a timer, this will be how much timeleft in milliseconds before timer hits zero.  It's a convenience so you don't have to calculate yourself. </p>
+<p>To convert to seconds divide by <code>1000</code>.</p>
+<h4 id="room_slug"><code>room_slug</code></h4>
+<p>This is the ID of the game room.  It's used mostly by the platform to target the correct room. </p>
+<h4 id="userid"><code>user</code>.<code>id</code></h4>
+<p>The user object holds the <code>id</code> of the user.  This is a shortid that can be used inside the "<a href="/development/#players">players</a>" object in the Game State.</p>
+<h4 id="userteamid"><code>user</code>.<code>teamid</code></h4>
+<p>If game has teams configured, the teamid will be stored here.</p>
+<hr/>
 <h2 id="system-actions">System actions</h2>
 <p>These actions are triggered automatically by the server</p>
 <h4 id="pregame"><code>pregame</code></h4>
@@ -450,13 +572,13 @@
             </div>
 </div>
 </a>
-<a aria-label="Next: - Client" class="md-footer__link md-footer__link--next" href="../client/" rel="next">
+<a aria-label="Next: - game-client" class="md-footer__link md-footer__link--next" href="../client/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              - Client
+              - game-client
             </div>
 </div>
 <div class="md-footer__button md-icon">

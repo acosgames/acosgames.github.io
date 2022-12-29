@@ -130,22 +130,27 @@
     Deployment
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#have-a-suggestion">
+    Have a suggestion?
+  </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../server/">
-        - Server
+        - game-server
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../client/">
-        - Client
+        - game-client
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gamestate/">
-        - Game State
+        - game state
       </a>
 </li>
 <li class="md-nav__item">
@@ -187,6 +192,11 @@
     Deployment
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#have-a-suggestion">
+    Have a suggestion?
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -200,7 +210,28 @@
 <h1>Simulator</h1>
 <h2 id="simulator-preview">Simulator Preview</h2>
 <p>Development of the client and server is done offline using the <a href="https://github.com/acosgames/acosgames">acosgames</a> simulator. This simulates the environment used on <a href="https://acos.games">acos.games</a>.</p>
-<p><div class="video-container"><iframe allowfullscreen="" frameborder="0" src="https://user-images.githubusercontent.com/1610876/209871930-1e88e11c-c54a-41bf-a5a5-ce5c6f9e3903.mp4" style="position: relative; width: 100%; height: 22.172vw"></iframe></div></p>
+<style>
+  .video-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+.video-wrapper > iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
+<div class="video-wrapper">
+<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/keGjP5ySqyg"></iframe>
+</div>
 <p>You will write javascript code in <code>game-client</code> for the frontend and authorative code in <code>game-server</code> which is run through a virtual machine.  </p>
 <p>Our examples use React and NodeJS respectively, with other frontend frameworks possible.</p>
 <h2 id="how-it-works">How it works</h2>
@@ -216,11 +247,21 @@
 <li>Players which are not joined to a game will automatically be in spectator mode.</li>
 <li>Scoreboard and timer to see players by team or score</li>
 <li>JSON Viewer which lets you scope the data to see from different perspectives.  This lets you see which JSON the Server, Players, or Spectators are seeing.</li>
-<li>Replay controls to go back or forward on user actions.</li>
+<li>Replay controls to go back or forward on user or game actions.</li>
 <li>Game Settings management, to specify screen type, screen size, player counts, team counts, and team configuration.</li>
 </ol>
 <h2 id="deployment">Deployment</h2>
-<p>Deployment at this time is done from the command line.  You will need your deploy command which is provided in the <a href="https://acos.games/dev">Developer Zone</a>.</p>
+<p>Deployment at this time is done from the command line.  You will need your deploy command which is provided in the <a href="https://acos.games/dev">Developer Zone</a>.  </p>
+<p>The following files will be uploaded:</p>
+<ol>
+<li><code>./builds/server/server.bundle.js</code></li>
+<li><code>./builds/client/client.bundle.js</code></li>
+<li><code>./builds/client/assets/*</code>  - all asset files in this folder, excluding sub-folders</li>
+<li><code>./game-server/database.json</code> - optional json database that is immutable </li>
+<li><code>./game-settings.json</code> - game settings configured from the simulator UI</li>
+</ol>
+<h2 id="have-a-suggestion">Have a suggestion?</h2>
+<p>Talk to us on <a href="https://discord.gg/ydHkCcNgHD">Discord</a></p>
 </article>
 </div>
 </div>
@@ -240,13 +281,13 @@
             </div>
 </div>
 </a>
-<a aria-label="Next: - Server" class="md-footer__link md-footer__link--next" href="../server/" rel="next">
+<a aria-label="Next: - game-server" class="md-footer__link md-footer__link--next" href="../server/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              - Server
+              - game-server
             </div>
 </div>
 <div class="md-footer__button md-icon">

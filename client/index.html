@@ -8,7 +8,7 @@
 <link href="https://docs.acos.games/client/" rel="canonical"/>
 <link href="../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>- Client - ACOS Documentation</title>
+<title>- game-client - ACOS Documentation</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <meta content="#4051b5" name="theme-color"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#game-client">
+<a class="md-skip" href="#overview">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              - Client
+              - game-client
             
           </span>
 </div>
@@ -102,17 +102,17 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../server/">
-        - Server
+        - game-server
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          - Client
+          - game-client
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        - Client
+        - game-client
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -121,144 +121,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#game-client">
-    Game Client
+<a class="md-nav__link" href="#overview">
+    Overview
   </a>
-<nav aria-label="Game Client" class="md-nav">
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attaching-to-message-listener">
+    Attaching to message listener
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sending-action">
+    Sending action
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-js-frontend-frameworks">
+    Custom JS Frontend Frameworks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assets">
+    Assets
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-limitations">
+    Client Limitations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-relevant-game-state">
+    Client relevant game state
+  </a>
+<nav aria-label="Client relevant game state" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#local-object">
-    local object
+    local (object)
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#next-object">
-    next object
+    next (object)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#time-latency">
-    time + latency
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#send-action">
-    send action
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#game-state">
-    Game State
-  </a>
-<nav aria-label="Game State" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#state">
-    state
-  </a>
-<nav aria-label="state" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hidden-values">
-    hidden values
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gamestatus">
-    gamestatus
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#players">
-    players
-  </a>
-<nav aria-label="players" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ready">
-    ready
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rank-score">
-    rank &amp; score
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#name">
-    name
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hidden-values_1">
-    hidden values
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rules">
-    rules
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#events">
-    events
-  </a>
-<nav aria-label="events" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#system-defined-events">
-    system defined events
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#required-gameover">
-    required gameover
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#custom-events">
-    custom events
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#timer">
-    timer
-  </a>
-<nav aria-label="timer" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#end">
-    end
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#seconds">
-    seconds
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#seq">
-    seq
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#next">
-    next
+<a class="md-nav__link" href="#timer-object">
+    timer (object)
   </a>
 </li>
 </ul>
@@ -269,7 +183,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gamestate/">
-        - Game State
+        - game state
       </a>
 </li>
 <li class="md-nav__item">
@@ -292,144 +206,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#game-client">
-    Game Client
+<a class="md-nav__link" href="#overview">
+    Overview
   </a>
-<nav aria-label="Game Client" class="md-nav">
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attaching-to-message-listener">
+    Attaching to message listener
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sending-action">
+    Sending action
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-js-frontend-frameworks">
+    Custom JS Frontend Frameworks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assets">
+    Assets
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-limitations">
+    Client Limitations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-relevant-game-state">
+    Client relevant game state
+  </a>
+<nav aria-label="Client relevant game state" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#local-object">
-    local object
+    local (object)
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#next-object">
-    next object
+    next (object)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#time-latency">
-    time + latency
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#send-action">
-    send action
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#game-state">
-    Game State
-  </a>
-<nav aria-label="Game State" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#state">
-    state
-  </a>
-<nav aria-label="state" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hidden-values">
-    hidden values
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gamestatus">
-    gamestatus
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#players">
-    players
-  </a>
-<nav aria-label="players" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ready">
-    ready
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rank-score">
-    rank &amp; score
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#name">
-    name
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hidden-values_1">
-    hidden values
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rules">
-    rules
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#events">
-    events
-  </a>
-<nav aria-label="events" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#system-defined-events">
-    system defined events
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#required-gameover">
-    required gameover
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#custom-events">
-    custom events
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#timer">
-    timer
-  </a>
-<nav aria-label="timer" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#end">
-    end
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#seconds">
-    seconds
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#seq">
-    seq
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#next">
-    next
+<a class="md-nav__link" href="#timer-object">
+    timer (object)
   </a>
 </li>
 </ul>
@@ -445,14 +273,74 @@
 <a class="md-content__button md-icon" href="https://github.com/acosgames/edit/master/docs/client.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>- Client</h1>
-<h2 id="game-client">Game Client</h2>
-<p>The client is responsible for displaying the game state that is forwarded to your game's front end. There is a helper file called <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> that listens for incoming state updates. Everytime there is an update, you will receive the full state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> file does.</p>
+<h1>- game-client</h1>
+<h2 id="overview">Overview</h2>
+<p>The client is responsible for displaying the game state that is synchronized to your browser frontend. There is a helper file called <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> that listens for incoming messages from parent window. </p>
+<p>Everytime there is a message update, you will receive the full game state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> file does.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a href="/gamestate/#example-game-state">Click here</a> to view an example Game State from Tic Tac Toe.</p>
 </div>
-<h3 id="local-object"><code>local</code> object</h3>
+<hr/>
+<h3 id="attaching-to-message-listener">Attaching to message listener</h3>
+<p>To receive game state updates, the client code must call
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span><span class="w"> </span><span class="nx">onMessage</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">onMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">gamestate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">evt</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">evt</span><span class="p">.</span><span class="nx">origin</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">evt</span><span class="p">.</span><span class="nx">source</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">gamestate</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<hr/>
+<h3 id="sending-action">Sending action</h3>
+<p>To send an action, you must call the <code>window.parent.postMessage</code> method.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"move"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">parent</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="nx">action</span><span class="p">,</span><span class="w"> </span><span class="s1">'*'</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Client's can also send actions in the following format using the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134">acosg.js</a> <code>send</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">send</span><span class="p">(</span><span class="s2">"pick"</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>The first parameter is always a string, second parameter can be any primitive, array, or object type.</p>
+<hr/>
+<h3 id="custom-js-frontend-frameworks">Custom JS Frontend Frameworks</h3>
+<p>Client code must be bundled into a <code>client.bundle.js</code> file.  You will not have access to the index.html file.  Instead, your client code must target the root element. </p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"root"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr/>
+<h3 id="assets">Assets</h3>
+<p>For simplicity, keep assets while in development in the <code>game-client/assets</code> folder.  This will allow it to work as expected when deployed.</p>
+<p>All assets when being deployed must be in the <code>game_slug/builds/client/assets</code> folder.  Sub-folders are not supported.  </p>
+<hr/>
+<h3 id="client-limitations">Client Limitations</h3>
+<p>Your client will be have origin policy that prevents it from accessing many outside resources.  Currently, we have this policy:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
+    <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Security-Policy"</span>
+    <span class="na">content</span><span class="o">=</span><span class="s">"default-src https://fonts.gstatic.com https://fonts.googleapis.com https://cdn.acos.games 'unsafe-inline' 'self' data:"</span>
+<span class="p">/&gt;</span>
+</code></pre></div>
+<p>Have suggestions that you want whitelisted?  Talk to us on <a href="https://discord.gg/ydHkCcNgHD">Discord</a></p>
+<h2 id="client-relevant-game-state">Client relevant game state</h2>
+<p>The gamestate object in this example will have all these objects from <a href="/gamestate/#example-game-state-tictactoe">Game State</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"local"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"teams"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr/>
+<h3 id="local-object"><strong>local</strong> (object)</h3>
+<p>This game state object is client-side only.  The platform will automatically add the <code>local</code> player object which is identical to the <a href="#players">players</a> game state for the local player.</p>
 <div class="highlight"><pre><span></span><code><span class="s2">"local"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"joe"</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">"rank"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
@@ -462,192 +350,32 @@
 <span class="w">    </span><span class="s2">"type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"X"</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>The platform will automatically add the <code>local</code> player object which is identical to the <a href="#players">players</a> game state for the local player.</p>
-<h3 id="next-object"><code>next</code> object</h3>
+<hr/>
+<h3 id="next-object"><strong>next</strong> (object)</h3>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="s2">"next"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"id"</span><span class="o">:</span><span class="w"> </span><span class="s2">"manC6"</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
 </code></pre></div>
 <p>The next object shows which player id is allowed to make the next action.  You should avoid sending if the local player is not in the <code>id</code> field.</p>
 <p>When the <code>id</code> is <code>'*'</code>, all players are allowed to submit an action.</p>
-<h3 id="time-latency">time + latency</h3>
+<hr/>
+<h3 id="timer-object"><strong>timer</strong> (object)</h3>
 <p><div class="highlight"><pre><span></span><code><span class="s2">"timer"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">"end"</span><span class="o">:</span><span class="w"> </span><span class="mf">1641441249109</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">"seconds"</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">"seq"</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"sequence"</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<a href="#timer">Timers</a> are very important to keep games fast-paced.  </p>
-<p>In order to ensure that players with high latency (400+ms) can feel the same rush of putting in a move at 0.1 seconds, all clients automatically have the <a href="#timer">timer.end</a> adjusted based on their latency to match server time.</p>
-<p>You can use the <code>seconds</code>, which is the original time in seconds set by the server, to calculate a percentage of time left.</p>
-<h3 id="send-action">send action</h3>
-<p>Client's can send actions in the following format using the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134">acosg.js</a> <code>send</code> function:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">send</span><span class="p">(</span><span class="s2">"pick"</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"></span>
+<a href="/gamestate/#timer-object">Timers</a> are very important to keep games fast-paced.  </p>
+<p>In order to ensure that players with high latency (400+ms) can play, all clients automatically have the <a href="/gamestate/#end-int">timer.end</a> adjusted based on their latency to match server time.</p>
+<p>For timeleft display on UI, you can use the <code>seconds</code> value which you can calculate the original time with:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">startTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gamestate</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">gamestate</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">seconds</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-<p>The first parameter is always a string, second parameter can be any primitive, array, or object type.</p>
-<hr/>
-<h2 id="game-state">Game State</h2>
-<p>The Game State consists of several objects:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h3 id="state">state</h3>
-<p>This is where you should keep all data that mutates on every action to modify the game board or environment.</p>
-<h4 id="hidden-values">hidden values</h4>
-<p>Inside the <code>state</code> object, you can create variables with <code>_</code> underscore to make them private.</p>
-<p>Example, that hides the deck from sending to clients:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"_deck"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"AS"</span><span class="p">,</span><span class="w"> </span><span class="s2">"AH"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3D"</span><span class="p">]</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h4 id="gamestatus">gamestatus</h4>
-<p>The <strong>gamestatus</strong> key is auto-generated by the platform and saved inside the <code>state</code>.</p>
-<p>The possible values are:</p>
-<ol>
-<li><code>pregame</code></li>
-<li><code>starting</code></li>
-<li><code>gamestart</code></li>
-<li><code>gameover</code></li>
-</ol>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"gamestatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamestart"</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>Game status is used internally by the platform with the timer to trigger the next gamestatus. Exception is when <code>gamestatus="gamestart"</code>, the timers will cause a "skip" action, for the current player(s) who are next.</p>
-<h3 id="players">players</h3>
-<p>When players are added into the game, they are automatically added into the players object. All players have a <code>shortid</code> that references them inside the Acos databse.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"ABCDEF"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JoeFacebook"</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"UVWXYZ"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JoeOfTexas"</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h4 id="ready">ready</h4>
-<p>Your client must trigger an action <code>send('ready', true)</code> when your client front-end is loaded. This is saved into the player's object, and let's the platform know when to trigger a <strong>gamestart</strong> event.</p>
-<h4 id="rank-score">rank &amp; score</h4>
-<p><code>rank</code> is set by you to determine who is in 1st, 2nd, 3rd, ..., nth place for the room. On gameover, the system will update the global player ratings based on this value. Lower is better.</p>
-<p><code>score</code> is set by you to determine how many points the users have earned. This has no purpose unless rank is removed, where scores will then be used to calculate new player ratings. Higher is better.</p>
-<h4 id="name">name</h4>
-<p><code>name</code> is the user's name that was setup when user first logged in.</p>
-<h4 id="hidden-values_1">hidden values</h4>
-<p>Inside the <code>players</code> object, you can create variables with <code>_</code> underscore to make them private.</p>
-<p>Example that hides the user's cards from sharing with other players:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"player"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"ABCDEF"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JoeOfTexas"</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"_cards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"2S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"5S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"6S"</span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h3 id="rules">rules</h3>
-<p>Rules are not mandatory, but its a clean way to define the rules of your game. How many rounds, max players, min players. Ideally, these should be static and not change between actions, but you can if you want.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"maxplayers"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"minplayers"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"rounds"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h3 id="events">events</h3>
-<p>Events are used to notify of a specific type of state change.</p>
-<h4 id="system-defined-events">system defined events</h4>
-<ul>
-<li><code>pregame</code> - when the first player joins the game</li>
-<li><code>starting</code> - when all players are ready (client front-ends are all loaded)</li>
-<li><code>gamestart</code>- after the starting countdown reaches zero</li>
-</ul>
-<h4 id="required-gameover">required gameover</h4>
-<p>You must trigger this event to end the game.  The state with this event will be the final update for all clients.</p>
-<ul>
-<li><code>gameover</code> - notifies everyone the game ended and room will be closed immediately</li>
-</ul>
-<h4 id="custom-events">custom events</h4>
-<p>You can create your own events by defining any key, here we used <code>pick</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"pick"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEF"</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">"picked"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>Or you could do even simpler:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"pick"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h3 id="timer">timer</h3>
-<p>The timer helps control the flow of the game. It is important that you always set a timer. Rooms will be destroyed if they do not complete within 1 hour.</p>
-<p>To set a timer, make sure you commit the game state with this format:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"set"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>The example above sets a timer for 15 seconds.</p>
-<p>The platform will detect the seconds set, and create <code>end</code> and <code>seconds</code> values:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1641439171453</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"seq"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h4 id="end">end</h4>
-<p><code>end</code> is the unix epoch time in milliseconds when the timer should reach zero.</p>
-<p>On the client-side, <code>end</code> is adjusted for latency automatically, and can be used to calculate near perfect timeleft with the following:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()).</span><span class="nx">getTime</span><span class="p">();</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">timeleft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">timer</span><span class="p">.</span><span class="nx">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">now</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<h4 id="seconds">seconds</h4>
-<p><code>seconds</code> shows the original time in seconds set by the server, so you can calculate elapsed percentages as needed.</p>
-<h4 id="seq">seq</h4>
-<p><code>seq</code> the current sequence, which is incremented for every new timer that is set.</p>
-<h3 id="next">next</h3>
-<p>The next object is used to tell the system who is allowed to send an action.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>The only required key is the <code>id</code> key. The values can be either <code>*</code> or player's shortid, i.e. <code>ABCDEF</code></p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: - Server" class="md-footer__link md-footer__link--prev" href="../server/" rel="prev">
+<a aria-label="Previous: - game-server" class="md-footer__link md-footer__link--prev" href="../server/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -656,17 +384,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              - Server
+              - game-server
             </div>
 </div>
 </a>
-<a aria-label="Next: - Game State" class="md-footer__link md-footer__link--next" href="../gamestate/" rel="next">
+<a aria-label="Next: - game state" class="md-footer__link md-footer__link--next" href="../gamestate/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              - Game State
+              - game state
             </div>
 </div>
 <div class="md-footer__button md-icon">
