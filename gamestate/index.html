@@ -289,6 +289,20 @@
 <nav aria-label="events (object)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#required-event">
+    required event
+  </a>
+<nav aria-label="required event" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gameover-event">
+    gameover event
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#custom-events">
     custom events
   </a>
@@ -552,6 +566,20 @@
 <nav aria-label="events (object)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#required-event">
+    required event
+  </a>
+<nav aria-label="required event" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gameover-event">
+    gameover event
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#custom-events">
     custom events
   </a>
@@ -806,6 +834,24 @@
 <hr/>
 <h3 id="events-object"><strong>events</strong> (object)</h3>
 <p>Events are used to notify of a specific type of state change for your client code to trigger UI update.  They are cleared on every game state update.</p>
+<h4 id="required-event">required event</h4>
+<h5 id="gameover-event"><code>gameover</code> event</h5>
+<p>gameover event is required to officially finish a game. This includes forfeits, wins or loss.  The only important requirement is the "key" must be called <code>gameover</code> like the following example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"gameover"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Or your can add metadata for your client UI to update:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"gameover"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"winner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEF"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <h4 id="custom-events">custom events</h4>
 <p>You can create your own events by defining any key, here we used <code>pick</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
