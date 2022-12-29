@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://docs.acos.games/client/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>- game-client - ACOS Documentation</title>
+<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<meta content="#4051b5" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-HC09PY1QY2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-HC09PY1QY2",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-HC09PY1QY2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="light-blue" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#overview">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ACOS Documentation" class="md-header__button md-logo" data-md-component="logo" href="https://acos.games" title="ACOS Documentation">
+<img alt="logo" src="../img/acos-logo-large.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ACOS Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              - game-client
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/acosgames" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ACOS Documentation" class="md-nav__button md-logo" data-md-component="logo" href="https://acos.games" title="ACOS Documentation">
+<img alt="logo" src="../img/acos-logo-large.png"/>
+</a>
+    ACOS Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/acosgames" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simulator/">
+        Simulator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../server/">
+        - game-server
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          - game-client
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        - game-client
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attaching-to-message-listener">
+    Attaching to message listener
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sending-action">
+    Sending action
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-js-frontend-frameworks">
+    Custom JS Frontend Frameworks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assets">
+    Assets
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-limitations">
+    Client Limitations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-relevant-game-state">
+    Client relevant game state
+  </a>
+<nav aria-label="Client relevant game state" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-object">
+    local (object)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next (object)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timer-object">
+    timer (object)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gamestate/">
+        - game state
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ranking/">
+        Ranking System
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attaching-to-message-listener">
+    Attaching to message listener
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sending-action">
+    Sending action
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-js-frontend-frameworks">
+    Custom JS Frontend Frameworks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assets">
+    Assets
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-limitations">
+    Client Limitations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#client-relevant-game-state">
+    Client relevant game state
+  </a>
+<nav aria-label="Client relevant game state" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-object">
+    local (object)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next (object)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timer-object">
+    timer (object)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/acosgames/edit/master/docs/client.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1>- game-client</h1>
+<h2 id="overview">Overview</h2>
+<p>The client is responsible for displaying the game state that is synchronized to your browser frontend. There is a helper file called <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> that listens for incoming messages from parent window. </p>
+<p>Everytime there is a message update, you will receive the full game state. The TicTacToe example uses ReactJS, but any JS framework can be used, as long as you can receive updates and send actions by re-creating what the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js">acosg.js</a> file does.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="/gamestate/#example-game-state">Click here</a> to view an example Game State from Tic Tac Toe.</p>
+</div>
+<hr/>
+<h3 id="attaching-to-message-listener">Attaching to message listener</h3>
+<p>To receive game state updates, the client code must call
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span><span class="w"> </span><span class="nx">onMessage</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">onMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">gamestate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">evt</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">evt</span><span class="p">.</span><span class="nx">origin</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">evt</span><span class="p">.</span><span class="nx">source</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">gamestate</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<hr/>
+<h3 id="sending-action">Sending action</h3>
+<p>To send an action, you must call the <code>window.parent.postMessage</code> method.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">"move"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">payload</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">parent</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="nx">action</span><span class="p">,</span><span class="w"> </span><span class="s1">'*'</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Client's can also send actions in the following format using the <a href="https://github.com/acosgames/tictactoe/blob/main/game-client/acosg.js#L134">acosg.js</a> <code>send</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">send</span><span class="p">(</span><span class="s2">"pick"</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>The first parameter is always a string, second parameter can be any primitive, array, or object type.</p>
+<hr/>
+<h3 id="custom-js-frontend-frameworks">Custom JS Frontend Frameworks</h3>
+<p>Client code must be bundled into a <code>client.bundle.js</code> file.  You will not have access to the index.html file.  Instead, your client code must target the root element. </p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"root"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr/>
+<h3 id="assets">Assets</h3>
+<p>For simplicity, keep assets while in development in the <code>game-client/assets</code> folder.  This will allow it to work as expected when deployed.</p>
+<p>All assets when being deployed must be in the <code>game_slug/builds/client/assets</code> folder.  Sub-folders are not supported.  </p>
+<hr/>
+<h3 id="client-limitations">Client Limitations</h3>
+<p>Your client will be have origin policy that prevents it from accessing many outside resources.  Currently, we have this policy:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
+    <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Security-Policy"</span>
+    <span class="na">content</span><span class="o">=</span><span class="s">"default-src https://fonts.gstatic.com https://fonts.googleapis.com https://cdn.acos.games 'unsafe-inline' 'self' data:"</span>
+<span class="p">/&gt;</span>
+</code></pre></div>
+<p>Have suggestions that you want whitelisted?  Talk to us on <a href="https://discord.gg/ydHkCcNgHD">Discord</a></p>
+<h2 id="client-relevant-game-state">Client relevant game state</h2>
+<p>The gamestate object in this example will have all these objects from <a href="/gamestate/#example-game-state-tictactoe">Game State</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"local"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"teams"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr/>
+<h3 id="local-object"><strong>local</strong> (object)</h3>
+<p>This game state object is client-side only.  The platform will automatically add the <code>local</code> player object which is identical to the <a href="#players">players</a> game state for the local player.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">"local"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"joe"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"rank"</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"score"</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"id"</span><span class="o">:</span><span class="w"> </span><span class="s2">"8CCkf"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"ready"</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"X"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr/>
+<h3 id="next-object"><strong>next</strong> (object)</h3>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="s2">"next"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"id"</span><span class="o">:</span><span class="w"> </span><span class="s2">"manC6"</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+</code></pre></div>
+<p>The next object shows which player id is allowed to make the next action.  You should avoid sending if the local player is not in the <code>id</code> field.</p>
+<p>When the <code>id</code> is <code>'*'</code>, all players are allowed to submit an action.</p>
+<hr/>
+<h3 id="timer-object"><strong>timer</strong> (object)</h3>
+<p><div class="highlight"><pre><span></span><code><span class="s2">"timer"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"end"</span><span class="o">:</span><span class="w"> </span><span class="mf">1641441249109</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"seconds"</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">"sequence"</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<a href="/gamestate/#timer-object">Timers</a> are very important to keep games fast-paced.  </p>
+<p>In order to ensure that players with high latency (400+ms) can play, all clients automatically have the <a href="/gamestate/#end-int">timer.end</a> adjusted based on their latency to match server time.</p>
+<p>For timeleft display on UI, you can use the <code>seconds</code> value which you can calculate the original time with:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">startTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gamestate</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">gamestate</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">seconds</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: - game-server" class="md-footer__link md-footer__link--prev" href="../server/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              - game-server
+            </div>
+</div>
+</a>
+<a aria-label="Next: - game state" class="md-footer__link md-footer__link--next" href="../gamestate/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              - game state
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+</body>
+</html>

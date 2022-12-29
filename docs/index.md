@@ -1,25 +1,40 @@
-# ACOS Documentation
+Create your own browser game using JavaScript frontend and backend with automatic multiplayer driven by JSON.
 
-[<img src="img/acos-logo-combined.png" alt="checkers" width="400"/>](https://acos.games/)
+The platform supports realtime online turn-based games.  
 
-Create your own web game using JavaScript frontend and NodeJS backend all driven by JSON.
+Focus on gameplay, let the platform handle everything else for free.
 
-The platform supports realtime Turn-based and Trivia style games.  
 
-Focus on gameplay, let the platform handle everything else for free at scale.
+## Become an ACOS Developer
 
-## Getting Started
+In order to create games, you must be in our [acosgames](https://github.com/acosgames) Github organization.  Joining is free, simply follow the steps below.
 
-1. Create a new game inside the [Developer Zone](https://acos.games/dev) on [ACOS](https://acos.games/).
-2. A public GitHub repository will be created at **https://github.com/acosgames/&lt;game_slug>** with the `Slug Name` you specified. You will be added as an admin to the repository.
+1. Visit the [Developer Zone](https://acos.games/dev)
+2. Follow the steps to sign in with Github and join our [acosgames](https://github.com/acosgames) organization 
 
-!!! tip "Just want to try coding?"
+## Creating a new game
+
+1. Create a new game inside the [Developer Zone](https://acos.games/dev).
+2. You may start from an existing game template or a blank template.  I recommend starting from existing template.
+
+<img src="img/devzone-screenshot2.png" alt="checkers" width="800"/>
+<!-- 2. A public GitHub repository will be created at:
+```
+ https://github.com/acosgames/game_slug
+```
+You will be added as an admin to the github repository.
+
+!!! note "Git Clone our examples to test existing games"
 
     Check out the Game Templates below to explore and run our game examples without signing up!
+ -->
 
-### Start from an existing Game Template
 
-When creating a game in Developer Zone, you can choose from the available game templates
+---
+
+## Start from an existing Game Template
+
+When creating a game in [Developer Zone](https://acos.games/dev), you can choose from the available game templates
 
 | Game Templates  |                                                           |                                                |                                                       |
 | --------------- | --------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------- |
@@ -31,45 +46,74 @@ When creating a game in Developer Zone, you can choose from the available game t
 
 ### After creating your game
 
-A new repository matching the `Slug Name` you provided will be created with the game template code.  Simply clone your new repository to get started.
+A new repository matching the `game_slug` you provided will be created in [acosgames](https://github.com/acosgames) organization with the game template code.  You are granted admin access to this repository.
+
+Simply clone your new repository to get started.  
 
 ```bash
-git clone git@github.com:acosgames/tictactoe.git
+git clone git@github.com:acosgames/game_slug.git
 ```
 
-!!! info "Note"
+You will see directory structure like below.  
 
-    You must create the game through [Developer Zone](https://acos.games/dev) to have repo created in acosgames organization.
+<img src="img/devzone-screenshot3.png" alt="checkers" width="300"/>
+
+`builds` folder has the development and production builds for both client and server, including the webpack configs.
+
+`game-client` has the frontend code in React for our game examples.
+
+`game-server` has the backend code using JavaScript that taps into our `globals` functions.
+
+`game-settings.json` will configure the screen size, min/max players and team configurations.
+
+---
 
 ## Running the game using simulator
 
-First make sure to install all the packages
+### NodeJS 16+ or 18+
+
+NodeJS 16+ will work, but we recommend NodeJS 18+
+
+### **Install**
+
+After cloning, navigate to the folder in a terminal and make sure to install the packages
 
 ```bash
 npm install
 ```
 
-To concurrently start the Client, Server, and acosgames Simulator run:
+### **Run**
+
+To start the simulator with your client and server code:
 
 ```bash
 npm start
 ```
 
-This will run the following:
+This will run the following apps:
 
-1. Game Client (ReactJS) with webpack watcher
-    - Browser-Sync to restart browser on file changes for client
-2. Game Server (NodeJS) with webpack watcher
-3. acosgames Simulator
-    - Includes Simulator Client + Simulator Server (NodeJS/Express/vm2)
+1. acosgames Simulator
+2. `game-client` (ReactJS) with webpack watcher
+    - Browser-Sync to restart iframe for game-client on code changes
+3. `game-server` (NodeJS) with webpack watcher
 
-Your Game Client will run inside an `<iframe>` and your Game Server will run inside the nodejs virtual machine.  
 
+### **Debug with VSCode Debug, add to launch.json**
+```json
+{
+    "command": "npm start",
+    "name": "Launch Tic Tac Toe",
+    "request": "launch",
+    "type": "node-terminal"
+},
+```
+
+This is the preferred method for running your code, as it will allow you to properly close the concurrent processes created for simulator, client, and server. 
 
 
 ## Deploy Game
 
-When you are ready to deploy the game, visit the [Developer Zone](https://acos.games/dev), and find your deployment command.
+When you are ready to deploy the game, visit the [Developer Zone](https://acos.games/dev), and find your deployment command in your game management page.
 
 Example:
 
@@ -77,8 +121,8 @@ Example:
 npm run deploy -- tictactoe.FBC4864251084B188F1A6E63F70C38D3
 ```
 
-This will bundle the Client, Server, and Database (if exists), and upload them to acos.games.
+This will build your code into *.js bundles, and upload them to acos.games.  Each deployment is automatically versioned by an incrementing number which can be used to publish specific version.  
 
 ## Publish Game
 
-The game will be immediately available as an **experimental** version. If you think its ready for production, go to the [Developer Zone](https://acos.games/dev) and click **Push to Production**.
+When you think the game is ready for production, go to the [Developer Zone](https://acos.games/dev) and click **Push to Production** for that game.  You can easily change which version is deployed from the game management page.

@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://docs.acos.games/gamestate/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>- game state - ACOS Documentation</title>
+<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<meta content="#4051b5" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-HC09PY1QY2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-HC09PY1QY2",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-HC09PY1QY2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="light-blue" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#overview">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ACOS Documentation" class="md-header__button md-logo" data-md-component="logo" href="https://acos.games" title="ACOS Documentation">
+<img alt="logo" src="../img/acos-logo-large.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ACOS Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              - game state
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/acosgames" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ACOS Documentation" class="md-nav__button md-logo" data-md-component="logo" href="https://acos.games" title="ACOS Documentation">
+<img alt="logo" src="../img/acos-logo-large.png"/>
+</a>
+    ACOS Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/acosgames" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simulator/">
+        Simulator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../server/">
+        - game-server
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../client/">
+        - game-client
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          - game state
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        - game state
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-state">
+    Game State
+  </a>
+<nav aria-label="Game State" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-object">
+    state (object)
+  </a>
+<nav aria-label="state (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scoped-keys">
+    scoped keys
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#players-object">
+    players (object)
+  </a>
+<nav aria-label="players (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scoped-keys_1">
+    scoped keys
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#name-string">
+    name (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rank-int">
+    rank (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#score-int">
+    score (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rating-int">
+    rating (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ready-boolean">
+    ready (boolean)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#id-string">
+    id (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teamid-string">
+    teamid (string)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teams-object">
+    teams (object)
+  </a>
+<nav aria-label="teams (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#team_slug-string-key">
+    team_slug (string key)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#name-string_1">
+    name (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#color-string-hex">
+    color (string hex)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#order-uint">
+    order (uint)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#players-array-of-strings">
+    players (array of strings)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rank-int_1">
+    rank (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#score-int_1">
+    score (int)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room-object">
+    room (object)
+  </a>
+<nav aria-label="room (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug-string">
+    room_slug (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-int">
+    sequence (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-string">
+    status (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starttime-int">
+    starttime (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#endtime-int">
+    endtime (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updated-int">
+    updated (int)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#events-object">
+    events (object)
+  </a>
+<nav aria-label="events (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-events">
+    custom events
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timer-object">
+    timer (object)
+  </a>
+<nav aria-label="timer (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-float">
+    set (float)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#end-int">
+    end (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seconds-int">
+    seconds (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-int_1">
+    sequence (int)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next (object)
+  </a>
+<nav aria-label="next (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#id-stringarray">
+    id (string|array)
+  </a>
+<nav aria-label="id (string|array)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#array-of-strings">
+    Array of Strings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#string">
+    String
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-stringarray">
+    action (string|array)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-game-state-tictactoe">
+    Example Game State (TicTacToe)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ranking/">
+        Ranking System
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#game-state">
+    Game State
+  </a>
+<nav aria-label="Game State" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-object">
+    state (object)
+  </a>
+<nav aria-label="state (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scoped-keys">
+    scoped keys
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#players-object">
+    players (object)
+  </a>
+<nav aria-label="players (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scoped-keys_1">
+    scoped keys
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#name-string">
+    name (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rank-int">
+    rank (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#score-int">
+    score (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rating-int">
+    rating (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ready-boolean">
+    ready (boolean)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#id-string">
+    id (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teamid-string">
+    teamid (string)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teams-object">
+    teams (object)
+  </a>
+<nav aria-label="teams (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#team_slug-string-key">
+    team_slug (string key)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#name-string_1">
+    name (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#color-string-hex">
+    color (string hex)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#order-uint">
+    order (uint)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#players-array-of-strings">
+    players (array of strings)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rank-int_1">
+    rank (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#score-int_1">
+    score (int)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room-object">
+    room (object)
+  </a>
+<nav aria-label="room (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug-string">
+    room_slug (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-int">
+    sequence (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-string">
+    status (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starttime-int">
+    starttime (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#endtime-int">
+    endtime (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updated-int">
+    updated (int)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#events-object">
+    events (object)
+  </a>
+<nav aria-label="events (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-events">
+    custom events
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timer-object">
+    timer (object)
+  </a>
+<nav aria-label="timer (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-float">
+    set (float)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#end-int">
+    end (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seconds-int">
+    seconds (int)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-int_1">
+    sequence (int)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-object">
+    next (object)
+  </a>
+<nav aria-label="next (object)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#id-stringarray">
+    id (string|array)
+  </a>
+<nav aria-label="id (string|array)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#array-of-strings">
+    Array of Strings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#string">
+    String
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-stringarray">
+    action (string|array)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-game-state-tictactoe">
+    Example Game State (TicTacToe)
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/acosgames/edit/master/docs/gamestate.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1>- game state</h1>
+<h2 id="overview">Overview</h2>
+<p>Server code will mostly focus on updating <code>state</code>, <code>players</code>, and <code>teams</code>.  Use the helper code to set the timer and events.  </p>
+<p>Client code may only create an <code>action</code>.</p>
+<hr/>
+<h2 id="game-state">Game State</h2>
+<p>The Game State consists of several objects:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"teams"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr/>
+<h3 id="state-object"><strong>state</strong> (object)</h3>
+<p>Store all your game board or environment data here.  </p>
+<h5 id="scoped-keys">scoped keys</h5>
+<p>Inside the <code>state</code> object, you can prefix keys with <code>_</code> underscore to make them private.  This is a special prefix character to keep data private to the server.</p>
+<p>Example, that hides the deck from sending to clients:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"_deck"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"AS"</span><span class="p">,</span><span class="w"> </span><span class="s2">"AH"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3D"</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr/>
+<h3 id="players-object"><strong>players</strong> (object)</h3>
+<p>Player data is stored here.  There are a few system reserved keys outlined below, but you should store all your custom player data in here.</p>
+<p>All players have a <code>shortid</code> that references a user in ACOS platform.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"iobYl"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Player2326"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">2636</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"teamid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team_o"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iobYl"</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"DjTS3"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Player7145"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">2364</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"teamid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team_x"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DjTS3"</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr/>
+<h5 id="scoped-keys_1">scoped keys</h5>
+<p>Inside the <code>players</code> object, you can prefix keys with <code>_</code> underscore to make them private for the player only.</p>
+<p>Example that hides the user's cards from sharing with other players:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"player"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"ABCDEF"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JoeOfTexas"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"_cards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"2S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"4S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"5S"</span><span class="p">,</span><span class="w"> </span><span class="s2">"6S"</span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="err">...</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr/>
+<h4 id="name-string"><code>name</code> (string)</h4>
+<p>name is the user's name that was setup when user first logged in.</p>
+<h4 id="rank-int"><code>rank</code> (int)</h4>
+<p>rank is set by you to determine who is in 1st, 2nd, 3rd, ..., nth place for the room. On gameover, the system will update the global player ratings based on this value. Lower is better.</p>
+<h4 id="score-int"><code>score</code> (int)</h4>
+<p>score is set by you to determine how many points the users have earned. This has no purpose unless rank is removed, where scores will then be used to calculate new player ratings. Higher is better.</p>
+<h4 id="rating-int"><code>rating</code> (int)</h4>
+<p>rating is automatically calculated based on the final <code>rank</code> or <code>score</code> value of all the players when the game status reaches gameover.</p>
+<h4 id="ready-boolean"><code>ready</code> (boolean)</h4>
+<p>Your client must trigger an action <code>send('ready', true)</code> when your client frontend is loaded. This is persisted into the player's object, and let's the platform know when to trigger a <strong>gamestart</strong> event.</p>
+<h4 id="id-string"><code>id</code> (string)</h4>
+<p>The id of the player, which is the parent key used in the <code>players</code> object.</p>
+<h4 id="teamid-string"><code>teamid</code> (string)</h4>
+<p>The teamid of the player, which maps to the <code>teams</code> object.</p>
+<hr/>
+<h3 id="teams-object"><strong>teams</strong> (object)</h3>
+<p>If your game supports teams configured in the game-settings.json.  Players will be automatically added into the <code>teams</code>.<code>players</code> object along with the name, color, and order you configured. </p>
+<p>Rank and score of a team will be used instead of player's rank and score if teams are defined.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"teams"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"team_o"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Team O"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#a2abdd"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">"iobYl"</span><span class="w"></span>
+<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"team_x"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Team X"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#dd7575"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">"DjTS3"</span><span class="w"></span>
+<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="team_slug-string-key"><strong><code>team_slug</code></strong> (string key)</h4>
+<p>This will be the teamid added into the player's data.</p>
+<h4 id="name-string_1"><strong><code>name</code></strong> (string)</h4>
+<p>The display name of this team</p>
+<h4 id="color-string-hex"><strong><code>color</code></strong> (string hex)</h4>
+<p>The color that represents the team.  Use CSS colors in hex format <code>#FFFFFF</code>. </p>
+<h4 id="order-uint"><strong><code>order</code></strong> (uint)</h4>
+<p>the order to display on the ACOS scoreboard</p>
+<h4 id="players-array-of-strings"><strong><code>players</code></strong> (array of strings)</h4>
+<p>list of players who belong to this team, may be modififed after players have joined</p>
+<h4 id="rank-int_1"><strong><code>rank</code></strong> (int)</h4>
+<p>the overall rank of this team, sometimes teams can win with lower score than opponents.  If they win the game, they need to have rank 1, while others have 2 or higher rank.</p>
+<h4 id="score-int_1"><strong><code>score</code></strong> (int)</h4>
+<p>the points scored by this team, higher is better</p>
+<hr/>
+<h3 id="room-object"><strong>room</strong> (object)</h3>
+<p>Stores room metadata that is updated by ACOS platform only.  </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"room_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HCTJM8"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gameover"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"starttime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1672290983803</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"endtime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1672290991462</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="room_slug-string"><strong><code>room_slug</code></strong> (string)</h4>
+<p>The room id used by ACOS platform to target the specific room.</p>
+<h4 id="sequence-int"><strong><code>sequence</code></strong> (int)</h4>
+<p>Every time the Game State is updated, this sequence will be incremented by 1.  This is different from <a href="/gamestate/#sequence-int_1">timer.sequence</a> that only updates when timer is updated.</p>
+<h4 id="status-string"><strong><code>status</code></strong> (string)</h4>
+<p>The possible values are:</p>
+<ol>
+<li>pregame - as soon as first player joins</li>
+<li>starting - as soon as all players have "ready" == true</li>
+<li>gamestart - after the starting countdown finishes</li>
+<li>gameover - after server code triggers gameover </li>
+</ol>
+<p>Room status is used internally by the platform to trigger the next room status. Exception is when status == "gamestart", the timers will cause a "skip" action for the current player(s) who are next.</p>
+<h4 id="starttime-int"><strong><code>starttime</code></strong> (int)</h4>
+<p>the unix epoch in milliseconds since the room was started</p>
+<h4 id="endtime-int"><strong><code>endtime</code></strong> (int)</h4>
+<p>the unix epoch in milliseconds when the room was closed</p>
+<h4 id="updated-int"><strong><code>updated</code></strong> (int)</h4>
+<p>the unix epoch in milliseconds when the game state was last updated</p>
+<hr/>
+<h3 id="events-object"><strong>events</strong> (object)</h3>
+<p>Events are used to notify of a specific type of state change for your client code to trigger UI update.  They are cleared on every game state update.</p>
+<h4 id="custom-events">custom events</h4>
+<p>You can create your own events by defining any key, here we used <code>pick</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"pick"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCDEF"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"picked"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Or you could do even simpler if you track the history of "next" from game state.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"pick"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="timer-object"><strong>timer</strong> (object)</h3>
+<p>The timer helps control the flow of the game. It is important that you always set a timer. Rooms will be destroyed if they do not complete within 1 hour.</p>
+<p>To set a timer, make sure you finish the game state update with <code>set</code> key:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"set"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The example above sets a timer for 15 seconds.</p>
+<h4 id="set-float"><strong><code>set</code></strong> (float)</h4>
+<p>Value in seconds (float)</p>
+<p>The platform will detect the seconds set, and create <code>end</code> and <code>seconds</code> values, and update the sequence counter:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1641439171453</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="end-int"><strong><code>end</code></strong> (int)</h4>
+<p>end is the unix epoch time in milliseconds when the timer should reach zero.</p>
+<p>On the client-side, <code>end</code> is adjusted for latency automatically, and can be used to calculate near perfect timeleft with the following:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()).</span><span class="nx">getTime</span><span class="p">();</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">timeleft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">timer</span><span class="p">.</span><span class="nx">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">now</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h4 id="seconds-int"><strong><code>seconds</code></strong> (int)</h4>
+<p><code>seconds</code> shows the original time in seconds set by the server, so you can calculate elapsed percentages as needed.</p>
+<h4 id="sequence-int_1"><strong><code>sequence</code></strong> (int)</h4>
+<p>the current sequence for timers, which is incremented by 1 every time a new timer is created with <code>set</code>.</p>
+<hr/>
+<h3 id="next-object"><strong>next</strong> (object)</h3>
+<p>The next object is used to tell the system who is allowed to send an action.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="id-stringarray"><strong><code>id</code></strong> (string|array)</h4>
+<p>The only required key is the <code>id</code> key. The values can be either <code>*</code> for everyone, player's <code>id</code>, or team's <code>teamid</code>. </p>
+<h5 id="array-of-strings">Array of Strings</h5>
+<p>If you use an array of strings, all ids whether player id or team id listed in the array will be allowed to perform an action.</p>
+<h5 id="string">String</h5>
+<p>If string provided only the specific player id or team id will be allowed to perform an action.</p>
+<h4 id="action-stringarray"><strong><code>action</code></strong> (string|array)</h4>
+<p>This key is optional.</p>
+<p>In the future, we may do something with bots/computers, so letting players know which actions can be performed may be helpful for AI.</p>
+<hr/>
+<h2 id="example-game-state-tictactoe"><strong>Example Game State (TicTacToe)</strong></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"room_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8HKDWM"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamestart"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"starttime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1672290602570</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"endtime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1672290609197</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"cells"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="s2">"O"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">"X"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">"O"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">""</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"sx"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DjTS3"</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iobYl"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pick"</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">1672300609197</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"iobYl"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Player2326"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">2636</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"teamid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team_o"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"X"</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"DjTS3"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Player7145"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">2364</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"teamid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"team_x"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"teams"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"team_o"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Team O"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#a2abdd"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">"iobYl"</span><span class="w"></span>
+<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"team_x"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Team X"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#dd7575"</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"players"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">"DjTS3"</span><span class="w"></span>
+<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: - game-client" class="md-footer__link md-footer__link--prev" href="../client/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              - game-client
+            </div>
+</div>
+</a>
+<a aria-label="Next: Ranking System" class="md-footer__link md-footer__link--next" href="../ranking/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Ranking System
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+</body>
+</html>

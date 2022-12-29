@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://docs.acos.games/server/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>- game-server - ACOS Documentation</title>
+<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<meta content="#4051b5" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-HC09PY1QY2"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-HC09PY1QY2",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-HC09PY1QY2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="light-blue" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#overview">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ACOS Documentation" class="md-header__button md-logo" data-md-component="logo" href="https://acos.games" title="ACOS Documentation">
+<img alt="logo" src="../img/acos-logo-large.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ACOS Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              - game-server
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/acosgames" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ACOS Documentation" class="md-nav__button md-logo" data-md-component="logo" href="https://acos.games" title="ACOS Documentation">
+<img alt="logo" src="../img/acos-logo-large.png"/>
+</a>
+    ACOS Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/acosgames" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../simulator/">
+        Simulator
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          - game-server
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        - game-server
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-it-works">
+    How it works
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globals">
+    Globals
+  </a>
+<nav aria-label="Globals" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalslogmsg">
+    globals.log(msg)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalserrormsg">
+    globals.error(msg)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsactions">
+    globals.actions()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsgame">
+    globals.game()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsrandom">
+    globals.random()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsdatabase">
+    globals.database()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsfinishgamestate">
+    globals.finish(gameState)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalskillgame">
+    globals.killGame()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsignore">
+    globals.ignore()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-json-server-perspective">
+    Action JSON (Server Perspective)
+  </a>
+<nav aria-label="Action JSON (Server Perspective)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type">
+    type
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payload">
+    payload
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeseq">
+    timeseq
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeleft">
+    timeleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug">
+    room_slug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userid">
+    user.id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userteamid">
+    user.teamid
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-actions">
+    System actions
+  </a>
+<nav aria-label="System actions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pregame">
+    pregame
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noshow">
+    noshow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting">
+    starting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gamestart">
+    gamestart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#skip">
+    skip
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../client/">
+        - game-client
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gamestate/">
+        - game state
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ranking/">
+        Ranking System
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-it-works">
+    How it works
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globals">
+    Globals
+  </a>
+<nav aria-label="Globals" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalslogmsg">
+    globals.log(msg)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalserrormsg">
+    globals.error(msg)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsactions">
+    globals.actions()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsgame">
+    globals.game()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsrandom">
+    globals.random()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsdatabase">
+    globals.database()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsfinishgamestate">
+    globals.finish(gameState)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalskillgame">
+    globals.killGame()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsignore">
+    globals.ignore()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-json-server-perspective">
+    Action JSON (Server Perspective)
+  </a>
+<nav aria-label="Action JSON (Server Perspective)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type">
+    type
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payload">
+    payload
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeseq">
+    timeseq
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timeleft">
+    timeleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#room_slug">
+    room_slug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userid">
+    user.id
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#userteamid">
+    user.teamid
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-actions">
+    System actions
+  </a>
+<nav aria-label="System actions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pregame">
+    pregame
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noshow">
+    noshow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting">
+    starting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gamestart">
+    gamestart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#skip">
+    skip
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/acosgames/edit/master/docs/server.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1>- game-server</h1>
+<h2 id="overview">Overview</h2>
+<p>Your server code in <code>game-server</code> folder is responsible for building the <strong>state</strong> that is automatically synchronized to all clients.  Your script will be executed once for every action received.</p>
+<p>Our game examples use a helper file in the game-server folder called <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/acosg.js">acosg.js</a>. Its a wrapper for the globals below to help simplify usage.</p>
+<p>See example usage in <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/index.js">index.js</a> and <a href="https://github.com/acosgames/tictactoe/blob/main/game-server/game.js">game.js</a> which use the helper file to keep things organized.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only pure JavaScript code is allowed from <code>npm</code> packages.  The server code will be bundled into a single <code>server.bundle.dev.js</code> for local development and <code>server.bundle.js</code> for production deployment.</p>
+</div>
+<h2 id="how-it-works">How it works</h2>
+<p>Your server code will run inside <a href="https://github.com/patriksimek/vm2">vm2</a>.  </p>
+<p>This prevents using code like <code>async</code>, <code>await</code>, <code>eval</code>, <code>wasm</code>, and many NodeJS standard packages like <code>fs</code> and <code>request</code>.</p>
+<hr/>
+<h2 id="globals">Globals</h2>
+<p>Your server code will have access to the <strong>globals</strong> object when run inside the vm.</p>
+<h3 id="globalslogmsg"><strong><code>globals.log(msg)</code></strong></h3>
+<ul>
+<li><strong><code>msg</code></strong> - single argument for output</li>
+</ul>
+<p>only available in simulator, ignored on acos.games </p>
+<h3 id="globalserrormsg"><strong><code>globals.error(msg)</code></strong></h3>
+<ul>
+<li><strong><code>msg</code></strong> - single argument for output</li>
+</ul>
+<p>only available in simulator, ignored on acos.games </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>globals.log and globals.error do not work like console.log and console.error, instead only a single argument is allowed</p>
+</div>
+<h3 id="globalsactions"><strong><code>globals.actions()</code></strong></h3>
+<p>get the array of actions sent by users or system</p>
+<p>View example <a href="#action-json-server-perspective">action</a> from server perspective</p>
+<h3 id="globalsgame"><strong><code>globals.game()</code></strong></h3>
+<p>gets a copy of the game state in JSON format save this to a variable and make changes directly to it</p>
+<p>View example <a href="/gamestate/#server-perspective-tictactoe">game state</a> from server perspective</p>
+<h3 id="globalsrandom"><strong><code>globals.random()</code></strong></h3>
+<p>discrete random number between 0 and 1 is seeded based on room data</p>
+<h3 id="globalsdatabase"><strong><code>globals.database()</code></strong></h3>
+<p>get the database JSON (optional)</p>
+<p>Save a <code>database.json</code> file in the game-server folder to use this feature.  This holds your static JSON, which is useful for large content, so it is not bundled into the script.</p>
+<h3 id="globalsfinishgamestate"><strong><code>globals.finish(gameState)</code></strong></h3>
+<ul>
+<li><strong><code>gameState</code></strong> - the final game state you updated from <a href="#globalsgame">globals.game()</a></li>
+</ul>
+<p>when finished all the updates for an action, call this to "commit" the state</p>
+<h3 id="globalskillgame"><strong><code>globals.killGame()</code></strong></h3>
+<p>kill the game immediately</p>
+<h3 id="globalsignore"><strong><code>globals.ignore()</code></strong></h3>
+<p>if you detect a bad action, tell system you want it ignored.</p>
+<hr/>
+<h2 id="action-json-server-perspective">Action JSON (Server Perspective)</h2>
+<p>All player actions will contain metadata generated by the platform, that identify a user and more.  </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pick"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"payload"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timeseq"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"timeleft"</span><span class="p">:</span><span class="w"> </span><span class="mi">29000</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"room_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HCTJM8"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iobYl"</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"teamid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VAD3R3"</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="type"><code>type</code></h4>
+<p>The type must always be a string.  This string value is provided by the client that you can process in your server code.</p>
+<h4 id="payload"><code>payload</code></h4>
+<p>The payload can be any primitive (boolean, int, float, string), array, or object.  It is best to keep these as simple as possible.  Only your server code will look at this value.</p>
+<h4 id="timeseq"><code>timeseq</code></h4>
+<p>Every time a new timer is set, the sequence is incremented by 1.  This helps ensure actions are only processed for the correct sequences.</p>
+<h4 id="timeleft"><code>timeleft</code></h4>
+<p>If there is a timer, this will be how much timeleft in milliseconds before timer hits zero.  It's a convenience so you don't have to calculate yourself. </p>
+<p>To convert to seconds divide by <code>1000</code>.</p>
+<h4 id="room_slug"><code>room_slug</code></h4>
+<p>This is the ID of the game room.  It's used mostly by the platform to target the correct room. </p>
+<h4 id="userid"><code>user</code>.<code>id</code></h4>
+<p>The user object holds the <code>id</code> of the user.  This is a shortid that can be used inside the "<a href="/development/#players">players</a>" object in the Game State.</p>
+<h4 id="userteamid"><code>user</code>.<code>teamid</code></h4>
+<p>If game has teams configured, the teamid will be stored here.</p>
+<hr/>
+<h2 id="system-actions">System actions</h2>
+<p>These actions are triggered automatically by the server</p>
+<h4 id="pregame"><code>pregame</code></h4>
+<p>Once the first player has joined the game, this action is triggered immediately.  A timer of 20 seconds will be activated, and if it reaches zero, it will call a <code>noshow</code> action.
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pregame"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h4 id="noshow"><code>noshow</code></h4>
+<p>An internal action that notifies the platform the game failed to start because players never joined the room.  The room will be killed immediately.
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"noshow"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h4 id="starting"><code>starting</code></h4>
+<p>After all players have joined and have sent a <code>ready</code> action, the <code>starting</code> action will be triggered.  Where a short 5 second timer will start, and when it reaches zero, will trigger the <code>gamestart</code> action.
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"starting"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h4 id="gamestart"><code>gamestart</code></h4>
+<p>Triggered when the timer from the <code>starting</code> action reaches zero.  Any timers that reach zero after this will trigger the <code>skip</code> action.
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gamestart"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h4 id="skip"><code>skip</code></h4>
+<p>Triggered when a timer reaches zero.  You should handle this action to forfeit a player or do some other logic.
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skip"</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Simulator" class="md-footer__link md-footer__link--prev" href="../simulator/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Simulator
+            </div>
+</div>
+</a>
+<a aria-label="Next: - game-client" class="md-footer__link md-footer__link--next" href="../client/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              - game-client
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+</body>
+</html>

@@ -1,10 +1,16 @@
-site_name: A cup of skill
+site_name: ACOS Documentation
 site_url: https://docs.acos.games
 repo_url: https://github.com/acosgames
 theme:
   favicon: img/favicon.ico
   name: material
-  logo: img/ACOS-docs-icon3.png
+  # custom_dir: 'theme'
+  palette:
+    primary: indigo
+    accent: light blue
+    scheme: slate
+
+  logo: img/acos-logo-large.png
 extra:
   homepage: https://acos.games
   analytics:
@@ -26,5 +32,9 @@ extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
 nav:
   - Getting Started: index.md
-  - Development: development.md
+  # - Development: development.md
+  - 'Simulator': simulator.md
+  - '- game-server': server.md
+  - '- game-client': client.md
+  - '- game state': gamestate.md
   - Ranking System: ranking.md

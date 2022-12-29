@@ -1,31 +1,21 @@
-# Development
+## Simulator Preview
 
-Overview of the concepts that make games work on the Acos platform.
+Development of the client and server is done offline using the [acosgames](https://github.com/acosgames/acosgames) simulator. This simulates the environment used on [acos.games](https://acos.games).
 
-## Simulator
 
-Development of the client and server can be done offline using the [acosgames](https://github.com/acosgames/acosgames) simulator. This simulates the environment used on [acos.games](https://acos.games).
+![type:video](https://user-images.githubusercontent.com/1610876/209871930-1e88e11c-c54a-41bf-a5a5-ce5c6f9e3903.mp4)
 
-Your code in `game-client` and `game-server` sit on the edge, while the simulator sits in the middle.
+You will write javascript code in `game-client` for the frontend and authorative code in `game-server` which is run through a virtual machine.  
 
-### State Machine
+Our examples use React and NodeJS respectively, with other frontend frameworks possible.
 
-```mermaid
-graph LR
-  A[game-client] --> B[Action]
-  B[Action] --> C{WebSocket Server};
-  C --> D[VirtualMachine];
-  D --> E[game-server];
-  E --> D;
-  D --> C;
-  C --> A;
-```
+## How it works
 
-The game-client peforms an **action** and the game-server executes that action. Your game logic results are saved into the [Game State](#game-state) which is just a plain JSON object. The simulator will synchronize the JSON between all connected clients and store the game state for the next action.
+The `game-client` peforms an **action** from user input and the `game-server` updates the state based on the action. The state is saved in the [Game State](#game-state) which is a JSON object. The simulator will synchronize the JSON between all connected clients and persist the game state for the next action.
 
 !!! note "Note"
 
-    It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, try to use a seed from any data within the [Game State](#game-state).
+    It is recommended that your server code be deterministic.  Meaning the same sequence of actions should always return the same result!  If you need to randomize, we provide a global function that is deterministic.
 
 -----
 
@@ -170,7 +160,7 @@ The client is responsible for displaying the game state that is forwarded to you
 
 !!! note "Note"
 
-    [Click here](#example-game-state) to view an example Game State from Tic Tac Toe.
+    [Click here](/gamestate/#example-game-state) to view an example Game State from Tic Tac Toe.
 
 
 ### local object
