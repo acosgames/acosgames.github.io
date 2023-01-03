@@ -15,6 +15,24 @@ Your server code will run inside [vm2](https://github.com/patriksimek/vm2).
 
 This prevents using code like `async`, `await`, `eval`, `wasm`, and many NodeJS standard packages like `fs` and `request`.
 
+You are also limited to **100ms** computation time for game-server code execution.  This means that your game rooms will be killed if you exceed the 100ms limitation.  Please take care to optimize as needed. 
+
+In deployment, the bundle filename will be tagged automatically with a version number.  This allows the ACOS platform to let you choose a version number to make active on production.  This also helps optimize caching on our servers.    
+
+---
+
+## Database (json)
+
+A static `database.json` file that allows you to store large datasets.  This is useful to avoid having large data added into the runtime script.  The json file will be loaded and accessible by the [globals.database()](/server/#globalsdatabase) method.
+
+#### File location
+
+The database.json file should be stored at `project/game-server/database.json`.  
+
+#### Format
+
+The format must be either `array` or `object` in JSON format.
+
 ---
 
 ## Globals
