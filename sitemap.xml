@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.acos.games/</loc>
-         <lastmod>2022-12-29</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/client/</loc>
-         <lastmod>2022-12-29</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/development/</loc>
-         <lastmod>2022-12-29</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/gamestate/</loc>
-         <lastmod>2022-12-29</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/ranking/</loc>
-         <lastmod>2022-12-29</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/server/</loc>
-         <lastmod>2022-12-29</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/simulator/</loc>
-         <lastmod>2022-12-29</lastmod>
+         <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
