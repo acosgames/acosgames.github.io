@@ -34,7 +34,8 @@ nav:
   - Getting Started: index.md
   # - Development: development.md
   - 'Simulator': simulator.md
-  - '- game-server': server.md
-  - '- game-client': client.md
-  - '- game state': gamestate.md
+  - Development:
+    - 'Server': server.md
+    - 'Client': client.md
+    - 'Game State': gamestate.md
   - Ranking System: ranking.md
