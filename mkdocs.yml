@@ -15,7 +15,7 @@ extra:
   homepage: https://acos.games
   analytics:
     provider: google
-    property: G-HC09PY1QY2
+    property: G-298125151
 markdown_extensions:
   - tables
   - def_list
