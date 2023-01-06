@@ -2,37 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.acos.games/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.acos.games/client/</loc>
-         <lastmod>2023-01-03</lastmod>
+         <lastmod>2023-01-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/development/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.acos.games/gamestate/</loc>
-         <lastmod>2023-01-03</lastmod>
+         <lastmod>2023-01-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/ranking/</loc>
-         <lastmod>2023-01-03</lastmod>
+         <lastmod>2023-01-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/server/</loc>
-         <lastmod>2023-01-03</lastmod>
+         <lastmod>2023-01-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.acos.games/simulator/</loc>
-         <lastmod>2023-01-03</lastmod>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/client/client/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/client/customframeworks/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/client/overview/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/client/receivesend/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/events/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/example/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/next/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/overview/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/players/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/room/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/state/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/teams/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/gamestate/timer/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/server/globals/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/server/overview/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/server/reserved/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/server/staticdatabase/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/server/systemactions/</loc>
+         <lastmod>2023-01-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.acos.games/server/useractions/</loc>
+         <lastmod>2023-01-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

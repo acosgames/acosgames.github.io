@@ -31,7 +31,7 @@ Our examples use React and NodeJS respectively, with other frontend frameworks p
 
 ## How it works
 
-The `game-client` peforms an **action** from user input and the `game-server` updates the state based on the action. The state is saved in the [Game State](#game-state) which is a JSON object. The simulator will synchronize the JSON between all connected clients and persist the game state for the next action.
+The `game-client` peforms an **action** from user input and the `game-server` updates the state based on the action. The state is saved in the [Game State](/gamestate/example/) which is a JSON object. The simulator will synchronize the JSON between all connected clients and persist the game state for the next action.
 
 !!! note "Note"
 

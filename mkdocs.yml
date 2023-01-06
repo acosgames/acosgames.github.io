@@ -11,11 +11,23 @@ theme:
     scheme: slate
 
   logo: img/acos-logo-large.png
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    # - navigation.tabs
 extra:
   homepage: https://acos.games
   analytics:
     provider: google
     property: G-298125151
+  social:
+    - icon: "fontawesome/solid/globe"
+      link: "https://acos.games"
+    - icon: "fontawesome/brands/github"
+      link: "https://github.com/acosgames"
+    - icon: "fontawesome/brands/discord"
+      link: "https://discord.gg/ydHkCcNgHD"
 markdown_extensions:
   - tables
   - def_list
@@ -30,12 +42,36 @@ plugins:
   - markdownmermaid
 extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+  - ./extra/extra.js
 nav:
   - Getting Started: index.md
   # - Development: development.md
-  - 'Simulator': simulator.md
-  - Development:
-    - 'Server': server.md
-    - 'Client': client.md
-    - 'Game State': gamestate.md
+  - Simulator: simulator.md
   - Ranking System: ranking.md
+  - Client:
+    - Overview: client/overview.md
+    - 'Recieve & Send': client/receivesend.md
+    - 'JS Frameworks': client/customframeworks.md
+  - Server:
+    - Overview: server/overview.md
+    - Global Functions: server/globals.md
+    - 'Static Database': server/staticdatabase.md
+    - 'User Actions': server/useractions.md
+    - 'System Actions': server/systemactions.md
+    - 'Reserved Actions': server/reserved.md
+  - Game State:
+    - View Example: gamestate/example.md
+    - Objects:
+      - state: gamestate/state.md
+      - players: gamestate/players.md
+      - teams: gamestate/teams.md
+      - room: gamestate/room.md
+      - events: gamestate/events.md
+      - timer: gamestate/timer.md
+      - next: gamestate/next.md
+
+  # - Development:
+  #   - 'Server': server.md
+  #   - 'Client': client/client.md
+  #   - 'Game State': gamestate/gamestate.md
+

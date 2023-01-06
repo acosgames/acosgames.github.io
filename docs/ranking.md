@@ -69,8 +69,9 @@ let rankTexts = [
 The rank text is calculated using this formula:
 ```js
 let rating = player.mu * 100;
-let rt = Math.min(5000, Math.max(0, rating));
-rt = rt / 5000;
+const maxRating = 5000;
+let rt = Math.min(maxRating, Math.max(0, rating));
+rt = rt / maxRating;
 rt = rt * (rankTexts.length - 1);
 rt = Math.round(rt);
 ```
