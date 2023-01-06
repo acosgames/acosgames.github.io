@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    return;//
     if (window.innerWidth < 1220)
         return;
 
