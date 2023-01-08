@@ -45,6 +45,7 @@ extra_javascript:
   - ./extra/extra.js
 nav:
   - Getting Started: index.md
+  - Features: features.md
   # - Development: development.md
   - Simulator: simulator.md
   - Ranking System: ranking.md
